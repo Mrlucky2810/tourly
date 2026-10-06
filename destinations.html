@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations - Explore World Cities & Wonders | Tourly</title>
+  <meta name="description" content="Browse popular travel destinations worldwide. Filter by region, discover top attractions, and plan your ideal vacation with Tourly.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header active" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+10123456790" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+1 (012) 345-6790</p>
+          </div>
+        </a>
+
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.svg" alt="Tourly logo">
+        </a>
+
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Search Destinations">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Navigation Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+            <li>
+              <a href="destinations.html" class="navbar-link active" data-nav-link>Destinations</a>
+            </li>
+            <li>
+              <a href="packages.html" class="navbar-link" data-nav-link>Packages</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="navbar-link" data-nav-link>Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <a href="packages.html" class="btn btn-primary">Book Now</a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #PAGE HERO
+      -->
+      <section class="page-hero">
+        <div class="container">
+          <h1 class="h1 hero-title">Explore Global Destinations</h1>
+          <ul class="breadcrumb-list">
+            <li><a href="index.html" class="breadcrumb-link">Home</a></li>
+            <li>&gt;</li>
+            <li class="breadcrumb-item active">Destinations</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #DESTINATIONS GRID & FILTER
+      -->
+      <section class="popular" style="padding-block: var(--section-padding);">
+        <div class="container">
+
+          <p class="section-subtitle" style="text-align: center;">Curated World Locations</p>
+          <h2 class="h2 section-title" style="text-align: center;">Where Do You Want To Go?</h2>
+          <p class="section-text" style="text-align: center; margin-bottom: 30px;">
+            Filter destinations by region or interest to find your ideal vacation spot.
+          </p>
+
+          <!-- Filter Buttons -->
+          <div class="filter-btn-group">
+            <button class="filter-btn active" data-filter-btn="all">All Destinations</button>
+            <button class="filter-btn" data-filter-btn="up">Uttar Pradesh</button>
+            <button class="filter-btn" data-filter-btn="bihar">Bihar</button>
+          </div>
+
+          <ul class="popular-list">
+
+            <!-- Card Spiritual 1: Varanasi -->
+            <li data-filter-card data-filter-category="up">
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="./assets/images/varanasi.jpg" alt="Varanasi Sacred Ghats, India" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <p class="card-subtitle"><a href="destination-detail.html?id=varanasi">Varanasi, India</a></p>
+                  <h3 class="h3 card-title"><a href="destination-detail.html?id=varanasi">Varanasi Sacred Ghats & Ganga Aarti</a></h3>
+                  <p class="card-text">
+                    Experience spiritual energy, evening Ganga Aarti ceremonies, ancient temples, and boat rides at sunrise.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- Card Spiritual 2: Ayodhya -->
+            <li data-filter-card data-filter-category="up">
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="./assets/images/ayodhya.jpg" alt="Shri Ram Mandir, Ayodhya" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <p class="card-subtitle"><a href="destination-detail.html?id=ayodhya">Ayodhya, India</a></p>
+                  <h3 class="h3 card-title"><a href="destination-detail.html?id=ayodhya">Ayodhya Shri Ram Janmabhoomi Mandir</a></h3>
+                  <p class="card-text">
+                    Visit the majestic Shri Ram Janmabhoomi temple, Hanuman Garhi, and serene Saryu River aarti ghats.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- Card Spiritual 3: Prayagraj -->
+            <li data-filter-card data-filter-category="up">
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="./assets/images/prayagraj.jpg" alt="Prayagraj Triveni Sangam" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <p class="card-subtitle"><a href="destination-detail.html?id=prayagraj">Prayagraj, India</a></p>
+                  <h3 class="h3 card-title"><a href="destination-detail.html?id=prayagraj">Prayagraj Triveni Sangam Confluence</a></h3>
+                  <p class="card-text">
+                    Take a holy dip at the sacred confluence of Ganga, Yamuna, and Saraswati rivers in Prayagraj.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- Card Spiritual 4: Gaya -->
+            <li data-filter-card data-filter-category="bihar">
+              <div class="popular-card">
+                <figure class="card-img">
+                  <img src="./assets/images/gaya.jpg" alt="Gaya Mahabodhi Temple" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+                  <p class="card-subtitle"><a href="destination-detail.html?id=gaya">Gaya & Bodh Gaya, India</a></p>
+                  <h3 class="h3 card-title"><a href="destination-detail.html?id=gaya">Gaya Vishnupad & Mahabodhi Temple</a></h3>
+                  <p class="card-text">
+                    Explore sacred Bodhi tree meditation groves, UNESCO Mahabodhi Temple, and ancient Vishnupad rituals.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #TRAVEL TIPS
+      -->
+      <section style="background: var(--cultured); padding-block: var(--section-padding);">
+        <div class="container">
+          <p class="section-subtitle" style="text-align: center;">Traveler Advice</p>
+          <h2 class="h2 section-title" style="text-align: center;">Essential Travel Tips</h2>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="calendar-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Best Time To Book</h3>
+              <p class="card-text">
+                Book international flights 6-8 weeks in advance for optimal savings and seat availability.
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="document-text-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Visa & Travel Insurance</h3>
+              <p class="card-text">
+                Verify passport validity requirements (minimum 6 months) and secure comprehensive medical travel cover.
+              </p>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="wallet-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Currency & Cards</h3>
+              <p class="card-text">
+                Notify your bank of international travel and carry modest local cash for small artisan markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #CTA
+      -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <p class="section-subtitle">Custom Trip Planning</p>
+            <h2 class="h2 section-title">Need A Custom Itinerary For Your Destination?</h2>
+            <p class="section-text">
+              Our travel specialists will design a personalized holiday package tailored to your exact dates and preferences.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-secondary">Request Custom Itinerary</a>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Tourly logo">
+          </a>
+          <p class="footer-text">
+            Tourly is your trusted global travel companion. We offer handpicked hotel stays, guided expeditions, and hassle-free booking services worldwide.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">Feel free to reach out for bookings & travel inquiries!</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+10123456790" class="contact-link">+1 (012) 345-6790</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@tourly.com" class="contact-link">info@tourly.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>3146 Koontz St, California, USA</address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-form">
+          <p class="form-text">Subscribe to our newsletter for exclusive travel deals & updates!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email Address" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.
+        </p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms & Conditions</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal" data-search-modal>
+    <div class="search-modal-box">
+      <span class="search-modal-close" data-search-close>&times;</span>
+      <h3 class="h3" style="color: var(--gunmetal);">Search Destinations & Packages</h3>
+      <form action="destinations.html" class="search-modal-form">
+        <input type="text" placeholder="Search by city, country, or attraction..." required>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Go To Top Button -->
+  <a href="#top" class="go-top" data-go-top aria-label="Go to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20have%20an%20inquiry!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

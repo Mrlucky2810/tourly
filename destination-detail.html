@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Details - Tourly Travel Agency</title>
+  <meta name="description" content="Explore destination highlights, top attractions, recommended itineraries, photo gallery, and travel tips with Tourly.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header active" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+10123456790" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+1 (012) 345-6790</p>
+          </div>
+        </a>
+
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.svg" alt="Tourly logo">
+        </a>
+
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Search Destinations">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Navigation Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+            <li><a href="about.html" class="navbar-link" data-nav-link>About Us</a></li>
+            <li><a href="destinations.html" class="navbar-link active" data-nav-link>Destinations</a></li>
+            <li><a href="packages.html" class="navbar-link" data-nav-link>Packages</a></li>
+            <li><a href="gallery.html" class="navbar-link" data-nav-link>Gallery</a></li>
+            <li><a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a></li>
+          </ul>
+
+        </nav>
+
+        <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20would%20like%20to%20inquire%20about%20a%20destination!" target="_blank" class="btn btn-whatsapp"><ion-icon name="logo-whatsapp"></ion-icon> Inquire On WhatsApp</a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main style="padding-top: 100px;">
+    <article class="container" style="padding-block: 40px;">
+
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb-list" style="justify-content: flex-start; margin-bottom: 25px;">
+        <li><a href="index.html" class="breadcrumb-link" style="color: var(--black-coral);">Home</a></li>
+        <li>&gt;</li>
+        <li><a href="destinations.html" class="breadcrumb-link" style="color: var(--black-coral);">Destinations</a></li>
+        <li>&gt;</li>
+        <li class="breadcrumb-item active" id="dest-breadcrumb">San Miguel, Italy</li>
+      </ul>
+
+      <!-- Detail Banner Hero -->
+      <div class="detail-banner">
+        <img src="./assets/images/popular-1.jpg" alt="Destination Banner" id="dest-banner-img">
+        <div class="detail-banner-overlay">
+          <h1 class="detail-title" id="dest-title">San Miguel, Coastal Italy</h1>
+          <div class="detail-meta-tags">
+            <div class="meta-tag-pill">
+              <ion-icon name="location-outline"></ion-icon>
+              <span id="dest-country">Italy, Europe</span>
+            </div>
+            <div class="meta-tag-pill">
+              <ion-icon name="sunny-outline"></ion-icon>
+              <span id="dest-season">Best Time: May - Oct</span>
+            </div>
+            <div class="meta-tag-pill">
+              <ion-icon name="thermometer-outline"></ion-icon>
+              <span>Avg Temp: 26°C</span>
+            </div>
+            <div class="meta-tag-pill" style="background: var(--bright-navy-blue);">
+              <ion-icon name="star"></ion-icon>
+              <span>4.9 / 5.0 Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Layout with Sticky Inquiry Sidebar -->
+      <div class="detail-layout">
+
+        <!-- Left Column: Content Blocks -->
+        <div class="detail-main">
+
+          <!-- Sticky Navigation Tabs -->
+          <div class="detail-tabs">
+            <a href="#overview" class="detail-tab-btn active">Overview</a>
+            <a href="#attractions" class="detail-tab-btn">Attractions</a>
+            <a href="#itinerary" class="detail-tab-btn">Suggested Itinerary</a>
+            <a href="#culture" class="detail-tab-btn">Culture & Food</a>
+            <a href="#faqs" class="detail-tab-btn">Travel FAQs</a>
+          </div>
+
+          <!-- Section 1: Overview -->
+          <div class="detail-section-block" id="overview">
+            <h3 class="detail-section-title">About The Destination</h3>
+            <p class="section-text" style="text-align: left; margin-inline: 0;" id="dest-desc-p1">
+              San Miguel is one of the Mediterranean's most picturesque coastal jewels, famous for its pastel-hued cliffside villas, crystal turquoise coves, and centuries-old terraced vineyards.
+            </p>
+            <p class="section-text" style="text-align: left; margin-inline: 0;" id="dest-desc-p2">
+              Visitors can wander through cobblestone alleys lined with artisan ceramic shops, savor fresh seafood caught daily by local fishermen, and take private boat tours along dramatic sea caves and hidden beaches.
+            </p>
+          </div>
+
+          <!-- Section 2: Top Attractions -->
+          <div class="detail-section-block" id="attractions">
+            <h3 class="detail-section-title">Top Must-See Attractions</h3>
+
+            <div class="attractions-grid">
+
+              <div class="attraction-card">
+                <img src="./assets/images/popular-1.jpg" alt="Old Harbor" class="attraction-img">
+                <div class="attraction-body">
+                  <h4 class="attraction-title">San Miguel Old Harbor</h4>
+                  <p class="attraction-text">Historic harbor with vibrant fishing boats, waterfront cafes, and gelaterias.</p>
+                </div>
+              </div>
+
+              <div class="attraction-card">
+                <img src="./assets/images/gallery-1.jpg" alt="Caldera Viewpoint" class="attraction-img">
+                <div class="attraction-body">
+                  <h4 class="attraction-title">Belvedere Panoramic Outlook</h4>
+                  <p class="attraction-text">Highest cliff top lookout providing 360-degree sunset views of the coastline.</p>
+                </div>
+              </div>
+
+              <div class="attraction-card">
+                <img src="./assets/images/gallery-3.jpg" alt="Terraced Vineyards" class="attraction-img">
+                <div class="attraction-body">
+                  <h4 class="attraction-title">Terraced Cliff Vineyards</h4>
+                  <p class="attraction-text">UNESCO-recognized organic vineyards producing iconic crisp coastal wines.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 3: Suggested Itinerary -->
+          <div class="detail-section-block" id="itinerary">
+            <h3 class="detail-section-title">Suggested 4-Day Destination Itinerary</h3>
+
+            <div class="itinerary-timeline">
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 1</span>
+                <h4 class="day-title">Old Town Stroll & Harbor Sunset Dinner</h4>
+                <p class="day-description">
+                  Check into your boutique cliffside hotel, wander through historic cobblestone plazas, and enjoy a traditional 3-course Italian welcome dinner at the harbor.
+                </p>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 2</span>
+                <h4 class="day-title">Private Coastal Boat Charter & Sea Caves</h4>
+                <p class="day-description">
+                  Charter a private wooden boat to explore emerald sea grottoes, swim in secluded coves, and enjoy a fresh caprese lunch on board.
+                </p>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 3</span>
+                <h4 class="day-title">Vineyard Trek & Organic Wine Tasting</h4>
+                <p class="day-description">
+                  Take a scenic walk along terraced coastal vineyard trails followed by a guided wine tasting and sommelier pairing session.
+                </p>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 4</span>
+                <h4 class="day-title">Artisan Shopping & Farewell Gelato</h4>
+                <p class="day-description">
+                  Shop for hand-painted ceramics and artisan leather goods, savor artisan gelato, and capture final panoramic photos before departure.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 4: Culture & Food -->
+          <div class="detail-section-block" id="culture">
+            <h3 class="detail-section-title">Local Culture & Culinary Delights</h3>
+
+            <div class="inc-exc-grid">
+              <div class="inc-box">
+                <h4><ion-icon name="restaurant" style="color: var(--bright-navy-blue);"></ion-icon> Local Food Specialities</h4>
+                <div class="inc-exc-list">
+                  <div class="inc-item">
+                    <ion-icon name="restaurant-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+                    <span>Fresh Linguine ai Frutti di Mare (Seafood Pasta)</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="wine-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+                    <span>Artisanal Chilled Limoncello Liqueur</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="pizza-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+                    <span>Neapolitan Wood-fired Buffalo Mozzarella Pizza</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inc-box">
+                <h4><ion-icon name="compass" style="color: var(--bright-navy-blue);"></ion-icon> Practical Visitor Info</h4>
+                <div class="inc-exc-list">
+                  <div class="inc-item">
+                    <ion-icon name="cash-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+                    <span>Currency: Euro (€) - Credit cards widely accepted</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="chatbubbles-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+                    <span>Language: Italian (English spoken in tourist hubs)</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="car-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+                    <span>Transit: Ferry, coastal buses & scenic funicular railway</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: FAQs -->
+          <div class="detail-section-block" id="faqs">
+            <h3 class="detail-section-title">Destination FAQs</h3>
+
+            <div class="faq-list" style="margin-top: 0;">
+              <div class="faq-item active">
+                <div class="faq-title">
+                  <span>When is the best season to visit?</span>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="faq-content">
+                  May through October offers warm Mediterranean weather, calm seas, and full operating hours for coastal boat charters.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <div class="faq-title">
+                  <span>Is this destination suitable for families and senior travelers?</span>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                </div>
+                <div class="faq-content">
+                  Yes, while there are scenic staircases, funicular railways and private taxi golf-carts are readily available for easy mobility.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Sticky Destination Inquiry Sidebar -->
+        <aside class="booking-widget" id="inquiry-section">
+          <div class="price-header">
+            <div class="price-amount" style="font-size: 24px;">Price On Request</div>
+            <span class="price-period">Handpicked hotels & custom tour packages</span>
+          </div>
+
+          <form action="#" id="destination-inquiry-form">
+            <div class="form-group">
+              <label for="dest-date">Preferred Travel Month*</label>
+              <input type="month" id="dest-date" class="input-field" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dest-pax">Number of Travelers*</label>
+              <select id="dest-pax" class="input-field" required>
+                <option value="1">1 Solo Traveler</option>
+                <option value="2" selected>2 Persons (Couple / Friends)</option>
+                <option value="3">3 - 4 Family Group</option>
+                <option value="5">5+ Large Group</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dest-email">Your Email Address*</label>
+              <input type="email" id="dest-email" class="input-field" placeholder="email@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dest-phone">Phone Number*</label>
+              <input type="tel" id="dest-phone" class="input-field" placeholder="+1 (555) 000-0000" required>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding-block: 14px; font-weight: var(--fw-700);">
+              <ion-icon name="logo-whatsapp"></ion-icon> Inquire On WhatsApp
+            </button>
+          </form>
+
+          <p style="text-align: center; font-size: 12px; color: var(--spanish-gray); margin-top: 15px;">
+            <ion-icon name="headset-outline"></ion-icon> Speak with a destination expert in under 2 hours.
+          </p>
+        </aside>
+
+      </div>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Tourly logo">
+          </a>
+          <p class="footer-text">
+            Tourly is your trusted global travel companion. We offer handpicked hotel stays, guided expeditions, and hassle-free booking services worldwide.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">Feel free to reach out for bookings & travel inquiries!</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+10123456790" class="contact-link">+1 (012) 345-6790</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@tourly.com" class="contact-link">info@tourly.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>3146 Koontz St, California, USA</address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-form">
+          <p class="form-text">Subscribe to our newsletter for exclusive travel deals & updates!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email Address" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.
+        </p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms & Conditions</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal" data-search-modal>
+    <div class="search-modal-box">
+      <span class="search-modal-close" data-search-close>&times;</span>
+      <h3 class="h3" style="color: var(--gunmetal);">Search Destinations & Packages</h3>
+      <form action="destinations.html" class="search-modal-form">
+        <input type="text" placeholder="Search by city, country, or attraction..." required>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Go To Top Button -->
+  <a href="#top" class="go-top" data-go-top aria-label="Go to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20have%20an%20inquiry!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- Dynamic Destination Data Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const destData = {
+        "varanasi": {
+          title: "Varanasi Sacred Ghats & Ganga Aarti",
+          country: "Varanasi, India",
+          season: "Best Time: Oct - Mar",
+          price: "Price On Request",
+          img: "./assets/images/varanasi.jpg"
+        },
+        "ayodhya": {
+          title: "Ayodhya Shri Ram Janmabhoomi Mandir",
+          country: "Ayodhya, India",
+          season: "Best Time: Oct - Apr",
+          price: "Price On Request",
+          img: "./assets/images/ayodhya.jpg"
+        },
+        "prayagraj": {
+          title: "Prayagraj Triveni Sangam Confluence",
+          country: "Prayagraj, India",
+          season: "Best Time: Oct - Mar",
+          price: "Price On Request",
+          img: "./assets/images/prayagraj.jpg"
+        },
+        "gaya": {
+          title: "Gaya Vishnupad & Mahabodhi Temple",
+          country: "Gaya & Bodh Gaya, India",
+          season: "Best Time: Oct - Mar",
+          price: "Price On Request",
+          img: "./assets/images/gaya.jpg"
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const destId = params.get("id") || "varanasi";
+      const data = destData[destId] || destData["varanasi"];
+
+      document.getElementById("dest-title").textContent = data.title;
+      document.getElementById("dest-breadcrumb").textContent = data.title;
+      document.getElementById("dest-country").textContent = data.country;
+      document.getElementById("dest-season").textContent = data.season;
+      document.getElementById("dest-banner-img").src = data.img;
+    });
+  </script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

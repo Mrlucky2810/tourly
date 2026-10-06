@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package Details - Tourly Travel Agency</title>
+  <meta name="description" content="View full itinerary, day-by-day activities, key attractions, inclusions, and book your dream vacation package with Tourly.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header active" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+10123456790" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+1 (012) 345-6790</p>
+          </div>
+        </a>
+
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.svg" alt="Tourly logo">
+        </a>
+
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Search Destinations">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Navigation Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
+            <li><a href="about.html" class="navbar-link" data-nav-link>About Us</a></li>
+            <li><a href="destinations.html" class="navbar-link" data-nav-link>Destinations</a></li>
+            <li><a href="packages.html" class="navbar-link active" data-nav-link>Packages</a></li>
+            <li><a href="gallery.html" class="navbar-link" data-nav-link>Gallery</a></li>
+            <li><a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a></li>
+          </ul>
+
+        </nav>
+
+        <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20would%20like%20to%20book%20a%20package!" target="_blank" class="btn btn-whatsapp"><ion-icon name="logo-whatsapp"></ion-icon> Book Via WhatsApp</a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main style="padding-top: 100px;">
+    <article class="container" style="padding-block: 40px;">
+
+      <!-- Breadcrumb -->
+      <ul class="breadcrumb-list" style="justify-content: flex-start; margin-bottom: 25px;">
+        <li><a href="index.html" class="breadcrumb-link" style="color: var(--black-coral);">Home</a></li>
+        <li>&gt;</li>
+        <li><a href="packages.html" class="breadcrumb-link" style="color: var(--black-coral);">Packages</a></li>
+        <li>&gt;</li>
+        <li class="breadcrumb-item active" id="pkg-breadcrumb">Kashi, Ayodhya & Prayagraj Sacred Yatra</li>
+      </ul>
+
+      <!-- Detail Banner Hero -->
+      <div class="detail-banner">
+        <img src="./assets/images/varanasi.jpg" alt="Package Banner Image" id="pkg-banner-img">
+        <div class="detail-banner-overlay">
+          <h1 class="detail-title" id="pkg-title">Kashi, Ayodhya & Prayagraj Sacred Yatra</h1>
+          <div class="detail-meta-tags">
+            <div class="meta-tag-pill">
+              <ion-icon name="location-outline"></ion-icon>
+              <span id="pkg-location">India</span>
+            </div>
+            <div class="meta-tag-pill">
+              <ion-icon name="time-outline"></ion-icon>
+              <span id="pkg-duration">7 Days / 6 Nights</span>
+            </div>
+            <div class="meta-tag-pill">
+              <ion-icon name="people-outline"></ion-icon>
+              <span id="pkg-pax">Max: 10 People</span>
+            </div>
+            <div class="meta-tag-pill" style="background: var(--bright-navy-blue);">
+              <ion-icon name="star"></ion-icon>
+              <span id="pkg-rating">4.9 (25 Reviews)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Layout with Sticky Booking Sidebar -->
+      <div class="detail-layout">
+
+        <!-- Left Column: Content Tabs & Blocks -->
+        <div class="detail-main">
+
+          <!-- Sticky Navigation Tabs -->
+          <div class="detail-tabs">
+            <a href="#overview" class="detail-tab-btn active">Overview</a>
+            <a href="#itinerary" class="detail-tab-btn">Itinerary</a>
+            <a href="#attractions" class="detail-tab-btn">Attractions</a>
+            <a href="#inclusions" class="detail-tab-btn">Inclusions</a>
+            <a href="#reviews" class="detail-tab-btn">Reviews</a>
+          </div>
+
+          <!-- Section 1: Overview -->
+          <div class="detail-section-block" id="overview">
+            <h3 class="detail-section-title">Package Overview</h3>
+            <p class="section-text" style="text-align: left; margin-inline: 0;" id="pkg-overview-p1">
+              Escape to paradise on an all-inclusive 7-day tropical beach getaway. This curated journey combines luxury 5-star oceanfront resort accommodation with private speedboat island hopping, coral reef snorkeling excursions, and gourmet seafood dining.
+            </p>
+            <p class="section-text" style="text-align: left; margin-inline: 0;" id="pkg-overview-p2">
+              Whether you are looking to unwind under palm trees, explore lush rainforest waterfalls, or cruise into the sunset on a private luxury catamaran, our experienced local guides will ensure every detail is handled seamlessly.
+            </p>
+          </div>
+
+          <!-- Section 2: Day-by-Day Itinerary -->
+          <div class="detail-section-block" id="itinerary">
+            <h3 class="detail-section-title">Day-by-Day Itinerary</h3>
+
+            <div class="itinerary-timeline">
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 1</span>
+                <h4 class="day-title">Arrival & Resort Welcome Dinner</h4>
+                <p class="day-description">
+                  Arrive at the international airport where your private chauffeur meets you for a luxury escort to your 5-star oceanfront resort. Enjoy a welcome tropical cocktail and evening seafood buffet.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">VIP Transfer</span>
+                  <span class="highlight-chip">Resort Check-In</span>
+                  <span class="highlight-chip">Welcome Buffet</span>
+                </div>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 2</span>
+                <h4 class="day-title">Island Hopping & Coral Reef Snorkeling</h4>
+                <p class="day-description">
+                  Board a private speedboat for a tour around 3 breathtaking tropical islands. Dive into turquoise waters to snorkel among vibrant coral reefs and exotic marine life with certified instructors.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">Speedboat Tour</span>
+                  <span class="highlight-chip">Snorkeling Gear</span>
+                  <span class="highlight-chip">Beach Lunch</span>
+                </div>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 3</span>
+                <h4 class="day-title">Rainforest Trek & Jungle Waterfalls</h4>
+                <p class="day-description">
+                  Hike through ancient rainforest trails accompanied by an expert eco-guide. Take a refreshing swim in crystal natural pool basins beneath cascading jungle waterfalls.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">Nature Hike</span>
+                  <span class="highlight-chip">Waterfall Swimming</span>
+                  <span class="highlight-chip">Eco-Guide</span>
+                </div>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 4</span>
+                <h4 class="day-title">Cultural Village & Artisan Cooking Class</h4>
+                <p class="day-description">
+                  Visit a traditional island village to experience local craftsmanship, spice markets, and take part in a hands-on culinary class preparing authentic regional dishes.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">Cultural Tour</span>
+                  <span class="highlight-chip">Cooking Class</span>
+                  <span class="highlight-chip">Artisan Markets</span>
+                </div>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 5</span>
+                <h4 class="day-title">Sunset Catamaran Yacht Cruise</h4>
+                <p class="day-description">
+                  Spend a relaxed morning at leisure. In the late afternoon, set sail on a luxury catamaran yacht with live music, gourmet appetizers, and a sparkling beverage toast at sunset.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">Catamaran Cruise</span>
+                  <span class="highlight-chip">Sunset Drinks</span>
+                  <span class="highlight-chip">Live Music</span>
+                </div>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 6</span>
+                <h4 class="day-title">Resort Wellness & Free Exploration Day</h4>
+                <p class="day-description">
+                  Indulge in a complimentary 60-minute full-body aromatherapy spa treatment at the resort wellness center. Enjoy free time for beach relaxation or boutique shopping.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">Spa Massage</span>
+                  <span class="highlight-chip">Beach Leisure</span>
+                  <span class="highlight-chip">Shopping</span>
+                </div>
+              </div>
+
+              <div class="itinerary-day-card">
+                <span class="day-badge">Day 7</span>
+                <h4 class="day-title">Souvenir Shopping & Airport Departure</h4>
+                <p class="day-description">
+                  Savor a final gourmet breakfast overlooking the sea before checking out. Enjoy souvenir shopping assistance followed by private transport back to the airport for your return flight.
+                </p>
+                <div class="day-highlights">
+                  <span class="highlight-chip">Gourmet Breakfast</span>
+                  <span class="highlight-chip">Airport Transfer</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 3: Attractions -->
+          <div class="detail-section-block" id="attractions">
+            <h3 class="detail-section-title">Featured Tour Attractions</h3>
+
+            <div class="attractions-grid">
+
+              <div class="attraction-card">
+                <img src="./assets/images/popular-1.jpg" alt="White Sand Bay" class="attraction-img">
+                <div class="attraction-body">
+                  <h4 class="attraction-title">White Sand Lagoon</h4>
+                  <p class="attraction-text">Powder-soft white beaches bordered by crystal clear azure ocean waters.</p>
+                </div>
+              </div>
+
+              <div class="attraction-card">
+                <img src="./assets/images/gallery-2.jpg" alt="Coral Marine Park" class="attraction-img">
+                <div class="attraction-body">
+                  <h4 class="attraction-title">Coral Marine Sanctuary</h4>
+                  <p class="attraction-text">Protected marine park home to colorful reef fish, sea turtles, and corals.</p>
+                </div>
+              </div>
+
+              <div class="attraction-card">
+                <img src="./assets/images/gallery-3.jpg" alt="Jungle Waterfall" class="attraction-img">
+                <div class="attraction-body">
+                  <h4 class="attraction-title">Emerald Jungle Falls</h4>
+                  <p class="attraction-text">Secluded multi-tiered waterfall nestled inside virgin tropical jungle trails.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Section 4: Inclusions & Exclusions -->
+          <div class="detail-section-block" id="inclusions">
+            <h3 class="detail-section-title">What's Included & Excluded</h3>
+
+            <div class="inc-exc-grid">
+              <div class="inc-box">
+                <h4><ion-icon name="checkmark-circle" class="icon-check"></ion-icon> What Is Included</h4>
+                <div class="inc-exc-list">
+                  <div class="inc-item">
+                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
+                    <span>6 Nights accommodation in 5-star beachfront resort</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
+                    <span>Daily breakfast buffet & 3 special dinners included</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
+                    <span>Round-trip private airport vehicle transfers</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
+                    <span>All tour entry fees, speedboat charters & snorkeling gear</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
+                    <span>Certified English-speaking local tour guide</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="exc-box">
+                <h4><ion-icon name="close-circle" class="icon-cross"></ion-icon> What Is Excluded</h4>
+                <div class="inc-exc-list">
+                  <div class="inc-item">
+                    <ion-icon name="close" class="icon-cross"></ion-icon>
+                    <span>International airline flight tickets</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="close" class="icon-cross"></ion-icon>
+                    <span>Personal expenses & alcoholic beverages</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="close" class="icon-cross"></ion-icon>
+                    <span>Travel insurance & passport visa fees</span>
+                  </div>
+                  <div class="inc-item">
+                    <ion-icon name="close" class="icon-cross"></ion-icon>
+                    <span>Discretionary tips for driver & tour guides</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: Reviews -->
+          <div class="detail-section-block" id="reviews">
+            <h3 class="detail-section-title">Traveler Reviews</h3>
+
+            <div class="values-grid">
+              <div class="value-card" style="text-align: left;">
+                <div style="color: gold; font-size: 18px; margin-bottom: 8px;">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+                <p class="card-text" style="font-style: italic;">
+                  "Unbelievable beach vacation! The speedboat tour and sunset catamaran cruise were highlight moments of our year."
+                </p>
+                <h5 style="margin-top: 10px; color: var(--gunmetal);">— Jessica & Tom K.</h5>
+              </div>
+
+              <div class="value-card" style="text-align: left;">
+                <div style="color: gold; font-size: 18px; margin-bottom: 8px;">
+                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                </div>
+                <p class="card-text" style="font-style: italic;">
+                  "Everything ran smoothly from airport pick-up to resort checkout. Highly recommended Tourly package!"
+                </p>
+                <h5 style="margin-top: 10px; color: var(--gunmetal);">— Liam Harrison</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Sticky Booking Widget -->
+        <aside class="booking-widget" id="booking-section">
+          <div class="price-header">
+            <div class="price-amount" style="font-size: 24px;">Price On Request</div>
+            <span class="price-period">Customized all-inclusive tour pricing</span>
+          </div>
+
+          <form action="#" id="package-booking-form">
+            <div class="form-group">
+              <label for="travel-date">Select Travel Date*</label>
+              <input type="date" id="travel-date" class="input-field" required>
+            </div>
+
+            <div class="form-group">
+              <label for="guest-count">Number of Travelers*</label>
+              <select id="guest-count" class="input-field" required>
+                <option value="1">1 Person</option>
+                <option value="2" selected>2 Persons</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons</option>
+                <option value="5">5+ Persons (Group Quote)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="guest-email">Your Email Address*</label>
+              <input type="email" id="guest-email" class="input-field" placeholder="email@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="guest-phone">Phone Number*</label>
+              <input type="tel" id="guest-phone" class="input-field" placeholder="+1 (555) 000-0000" required>
+            </div>
+
+            <!-- Calculated Summary Box -->
+            <div class="booking-summary-box">
+              <div class="booking-summary-row">
+                <span>Trip Consultation:</span>
+                <span style="color: #2e7d32; font-weight: bold;">Free</span>
+              </div>
+              <div class="booking-summary-row">
+                <span>Hotels & Transfers:</span>
+                <span>Included</span>
+              </div>
+              <div class="booking-summary-row total">
+                <span>Price Quote:</span>
+                <span style="color: var(--bright-navy-blue);">Via WhatsApp</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding-block: 14px; font-weight: var(--fw-700);">
+              <ion-icon name="logo-whatsapp"></ion-icon> Book Via WhatsApp
+            </button>
+          </form>
+
+          <p style="text-align: center; font-size: 12px; color: var(--spanish-gray); margin-top: 15px;">
+            <ion-icon name="shield-checkmark-outline"></ion-icon> Free cancellation up to 14 days before trip date.
+          </p>
+        </aside>
+
+      </div>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Tourly logo">
+          </a>
+          <p class="footer-text">
+            Tourly is your trusted global travel companion. We offer handpicked hotel stays, guided expeditions, and hassle-free booking services worldwide.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">Feel free to reach out for bookings & travel inquiries!</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+10123456790" class="contact-link">+1 (012) 345-6790</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@tourly.com" class="contact-link">info@tourly.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>3146 Koontz St, California, USA</address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-form">
+          <p class="form-text">Subscribe to our newsletter for exclusive travel deals & updates!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email Address" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.
+        </p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms & Conditions</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal" data-search-modal>
+    <div class="search-modal-box">
+      <span class="search-modal-close" data-search-close>&times;</span>
+      <h3 class="h3" style="color: var(--gunmetal);">Search Destinations & Packages</h3>
+      <form action="destinations.html" class="search-modal-form">
+        <input type="text" placeholder="Search by city, country, or attraction..." required>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Go To Top Button -->
+  <a href="#top" class="go-top" data-go-top aria-label="Go to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20have%20an%20inquiry!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- Package Detail Dynamic Data & Calculator Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const packageData = {
+        "kashi-ayodhya-yatra": {
+          title: "Kashi, Ayodhya & Prayagraj Sacred Yatra",
+          location: "India",
+          duration: "6 Days / 5 Nights",
+          maxPax: "Max: 15 People",
+          rating: "5.0 (58 Reviews)",
+          price: "Price On Request",
+          img: "./assets/images/varanasi.jpg"
+        },
+        "gaya-varanasi-circuit": {
+          title: "Gaya & Kashi Pilgrimage Trail",
+          location: "India",
+          duration: "5 Days / 4 Nights",
+          maxPax: "Max: 12 People",
+          rating: "4.9 (42 Reviews)",
+          price: "Price On Request",
+          img: "./assets/images/gaya.jpg"
+        },
+        "ayodhya-darshan": {
+          title: "Ayodhya Ram Mandir & Saryu Aarti Express",
+          location: "India",
+          duration: "3 Days / 2 Nights",
+          maxPax: "Max: 20 People",
+          rating: "5.0 (64 Reviews)",
+          price: "Price On Request",
+          img: "./assets/images/ayodhya.jpg"
+        },
+        "prayagraj-sangam": {
+          title: "Prayagraj Sangam & Sacred Heritage Tour",
+          location: "India",
+          duration: "3 Days / 2 Nights",
+          maxPax: "Max: 15 People",
+          rating: "4.9 (39 Reviews)",
+          price: "Price On Request",
+          img: "./assets/images/prayagraj.jpg"
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const pkgId = params.get("id") || "kashi-ayodhya-yatra";
+      const data = packageData[pkgId] || packageData["kashi-ayodhya-yatra"];
+
+      // Update Header & Tags
+      document.getElementById("pkg-title").textContent = data.title;
+      document.getElementById("pkg-breadcrumb").textContent = data.title;
+      document.getElementById("pkg-location").textContent = data.location;
+      document.getElementById("pkg-duration").textContent = data.duration;
+      document.getElementById("pkg-pax").textContent = data.maxPax;
+      document.getElementById("pkg-rating").textContent = data.rating;
+      document.getElementById("pkg-banner-img").src = data.img;
+    });
+  </script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

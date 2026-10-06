@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Packages - All-Inclusive Holiday Deals | Tourly</title>
+  <meta name="description" content="Explore top-rated holiday packages. Book luxury beach getaways, river safaris, and European tours with Tourly. All-inclusive prices guaranteed!">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header active" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+    <div class="header-top">
+      <div class="container">
+
+        <a href="tel:+10123456790" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">For Further Inquiries:</p>
+            <p class="helpline-number">+1 (012) 345-6790</p>
+          </div>
+        </a>
+
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.svg" alt="Tourly logo">
+        </a>
+
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Search Packages">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+
+        <ul class="social-list">
+          <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
+            </a>
+
+            <button class="nav-close-btn" aria-label="Close Navigation Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+            <li>
+              <a href="destinations.html" class="navbar-link" data-nav-link>Destinations</a>
+            </li>
+            <li>
+              <a href="packages.html" class="navbar-link active" data-nav-link>Packages</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="navbar-link" data-nav-link>Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <a href="packages.html" class="btn btn-primary">Book Now</a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #PAGE HERO
+      -->
+      <section class="page-hero">
+        <div class="container">
+          <h1 class="h1 hero-title">Featured Holiday Packages</h1>
+          <ul class="breadcrumb-list">
+            <li><a href="index.html" class="breadcrumb-link">Home</a></li>
+            <li>&gt;</li>
+            <li class="breadcrumb-item active">Packages</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #PACKAGE LIST & FILTER
+      -->
+      <section class="package" style="padding-block: var(--section-padding);">
+        <div class="container">
+
+          <p class="section-subtitle" style="text-align: center;">Curated Deals</p>
+          <h2 class="h2 section-title" style="text-align: center;">Choose Your Next Adventure</h2>
+          <p class="section-text" style="text-align: center; margin-bottom: 30px;">
+            All packages include hotel accommodation, airport transfers, guided tours, and 24/7 customer assistance.
+          </p>
+
+          <!-- Filter Buttons -->
+          <div class="filter-btn-group">
+            <button class="filter-btn active" data-filter-btn="all">All Packages</button>
+            <button class="filter-btn" data-filter-btn="spiritual">Sacred Yatras</button>
+            <button class="filter-btn" data-filter-btn="express">Express Darshan</button>
+            <button class="filter-btn" data-filter-btn="heritage">Heritage Trails</button>
+          </div>
+
+          <ul class="package-list">
+
+            <!-- Spiritual Package 1: Kashi Ayodhya Prayagraj Yatra -->
+            <li data-filter-card data-filter-category="spiritual">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/varanasi.jpg" alt="Kashi Ayodhya Prayagraj Sacred Yatra" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title"><a href="package-detail.html?id=kashi-ayodhya-yatra" style="color:inherit;">Kashi, Ayodhya & Prayagraj Sacred Yatra</a></h3>
+                  <p class="card-text">
+                    6-day holy pilgrimage featuring Kashi Vishwanath temple, evening Ganga Aarti, Ayodhya Ram Mandir, and Triveni Sangam dip.
+                  </p>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="time-outline"></ion-icon><p class="text">6D / 5N</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="people-outline"></ion-icon><p class="text">Max: 15</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="location-outline"></ion-icon><p class="text">India</p></div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(58 Reviews)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">Price On Request</p>
+                  <a href="package-detail.html?id=kashi-ayodhya-yatra" class="btn btn-secondary">View Details</a>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Spiritual Package 2: Gaya Bodh Gaya & Varanasi -->
+            <li data-filter-card data-filter-category="heritage">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/gaya.jpg" alt="Gaya & Kashi Pilgrimage" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title"><a href="package-detail.html?id=gaya-varanasi-circuit" style="color:inherit;">Gaya & Kashi Pilgrimage Trail</a></h3>
+                  <p class="card-text">
+                    5-day spiritual journey covering Gaya Vishnupad, Bodh Gaya Mahabodhi tree, and sacred ghats & temples of Varanasi.
+                  </p>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="time-outline"></ion-icon><p class="text">5D / 4N</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="people-outline"></ion-icon><p class="text">Max: 12</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="location-outline"></ion-icon><p class="text">India</p></div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(42 Reviews)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">Price On Request</p>
+                  <a href="package-detail.html?id=gaya-varanasi-circuit" class="btn btn-secondary">View Details</a>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Spiritual Package 3: Ayodhya Ram Mandir Express -->
+            <li data-filter-card data-filter-category="express">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/ayodhya.jpg" alt="Ayodhya Ram Mandir Darshan" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title"><a href="package-detail.html?id=ayodhya-darshan" style="color:inherit;">Ayodhya Ram Mandir & Saryu Aarti Express</a></h3>
+                  <p class="card-text">
+                    Immersive 3-day divine pilgrimage to Shri Ram Janmabhoomi Mandir, Hanuman Garhi, and evening Saryu river aarti.
+                  </p>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="time-outline"></ion-icon><p class="text">3D / 2N</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="people-outline"></ion-icon><p class="text">Max: 20</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="location-outline"></ion-icon><p class="text">India</p></div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(64 Reviews)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">Price On Request</p>
+                  <a href="package-detail.html?id=ayodhya-darshan" class="btn btn-secondary">View Details</a>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Spiritual Package 4: Prayagraj Sangam -->
+            <li data-filter-card data-filter-category="spiritual">
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/prayagraj.jpg" alt="Prayagraj Triveni Sangam Yatra" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3 card-title"><a href="package-detail.html?id=prayagraj-sangam" style="color:inherit;">Prayagraj Sangam & Sacred Heritage Tour</a></h3>
+                  <p class="card-text">
+                    Holy retreat to Triveni Sangam, boat rides, divine visits to Hanuman Mandir and historic Akshaya Vat.
+                  </p>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="time-outline"></ion-icon><p class="text">3D / 2N</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="people-outline"></ion-icon><p class="text">Max: 15</p></div>
+                    </li>
+                    <li class="card-meta-item">
+                      <div class="meta-box"><ion-icon name="location-outline"></ion-icon><p class="text">India</p></div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="card-price">
+                  <div class="wrapper">
+                    <p class="reviews">(39 Reviews)</p>
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+                    </div>
+                  </div>
+                  <p class="price">Price On Request</p>
+                  <a href="package-detail.html?id=prayagraj-sangam" class="btn btn-secondary">View Details</a>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #WHAT'S INCLUDED
+      -->
+      <section style="background: var(--cultured); padding-block: var(--section-padding);">
+        <div class="container">
+          <p class="section-subtitle" style="text-align: center;">Tour Highlights</p>
+          <h2 class="h2 section-title" style="text-align: center;">Included In Every Tourly Package</h2>
+
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="airplane-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Airport Transfers</h3>
+              <p class="card-text">Hassle-free private airport pick-up and drop-off at your hotel door.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="bed-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Handpicked Hotels</h3>
+              <p class="card-text">Strictly vetted 4-star & 5-star accommodations with central city locations.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="restaurant-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Daily Breakfast</h3>
+              <p class="card-text">Complimentary gourmet breakfast buffets included every morning.</p>
+            </div>
+
+            <div class="value-card">
+              <div class="card-icon"><ion-icon name="people-circle-outline"></ion-icon></div>
+              <h3 class="h3 card-title" style="margin-bottom:10px;">Certified Guides</h3>
+              <p class="card-text">Multilingual, knowledgeable local guides for all historic sight visits.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #CTA
+      -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content">
+            <p class="section-subtitle">Group Discounts</p>
+            <h2 class="h2 section-title">Planning A Family Or Corporate Group Trip?</h2>
+            <p class="section-text">
+              Save up to 20% on bookings of 5 or more people. Contact our group reservations desk today!
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-secondary">Get Group Quote</a>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Tourly logo">
+          </a>
+          <p class="footer-text">
+            Tourly is your trusted global travel companion. We offer handpicked hotel stays, guided expeditions, and hassle-free booking services worldwide.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="contact-title">Contact Us</h4>
+          <p class="contact-text">Feel free to reach out for bookings & travel inquiries!</p>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+10123456790" class="contact-link">+1 (012) 345-6790</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:info@tourly.com" class="contact-link">info@tourly.com</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>3146 Koontz St, California, USA</address>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-form">
+          <p class="form-text">Subscribe to our newsletter for exclusive travel deals & updates!</p>
+          <form action="#" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email Address" required>
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.
+        </p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom-link">Terms & Conditions</a></li>
+          <li><a href="contact.html" class="footer-bottom-link">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal" data-search-modal>
+    <div class="search-modal-box">
+      <span class="search-modal-close" data-search-close>&times;</span>
+      <h3 class="h3" style="color: var(--gunmetal);">Search Destinations & Packages</h3>
+      <form action="destinations.html" class="search-modal-form">
+        <input type="text" placeholder="Search by city, country, or attraction..." required>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Go To Top Button -->
+  <a href="#top" class="go-top" data-go-top aria-label="Go to top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20have%20an%20inquiry!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <!-- Custom JS -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
