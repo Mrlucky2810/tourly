@@ -38,11 +38,13 @@ const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY >= 200) {
+  if (window.scrollY >= 150) {
     if (header) header.classList.add("active");
     if (goTopBtn) goTopBtn.classList.add("active");
   } else {
-    if (header) header.classList.remove("active");
+    if (header && !header.hasAttribute("data-header-fixed")) {
+      header.classList.remove("active");
+    }
     if (goTopBtn) goTopBtn.classList.remove("active");
   }
 });
@@ -162,11 +164,52 @@ forms.forEach(form => {
     let msg = "Hello Tourly Travel Agency! I have an inquiry:\n";
 
     if (this.classList.contains("tour-search-form")) {
-      const dest = formData.get("destination") || "Any Destination";
+      const rawDest = (formData.get("destination") || "").trim();
       const pax = formData.get("people") || "1";
       const checkin = formData.get("checkin") || "Flexible";
       const checkout = formData.get("checkout") || "Flexible";
+      const dest = rawDest || "Sacred Pilgrimages & Yatras";
+
       msg += `📍 Destination: ${dest}\n👥 Travelers: ${pax}\n📅 Check-in: ${checkin}\n📅 Check-out: ${checkout}`;
+
+      // On-page search matching: find matching cards and smooth scroll
+      if (rawDest) {
+        const query = rawDest.toLowerCase();
+        const normalize = q => {
+          if (q.includes("vanra") || q.includes("varan") || q.includes("kashi") || q.includes("banar")) return "varanasi";
+          if (q.includes("ayodh") || q.includes("ram")) return "ayodhya";
+          if (q.includes("kedar")) return "kedarnath";
+          if (q.includes("badri")) return "badrinath";
+          if (q.includes("prayag") || q.includes("allahabad")) return "prayagraj";
+          return q;
+        };
+        const searchKey = normalize(query);
+
+        const allCards = document.querySelectorAll(".popular-card, .package-card, .place-card, .package-grid-card");
+        let matchedCard = null;
+
+        allCards.forEach(card => {
+          const cardText = card.textContent.toLowerCase();
+          if (cardText.includes(query) || cardText.includes(searchKey)) {
+            if (!matchedCard) matchedCard = card;
+            card.classList.add("card-search-highlight");
+            setTimeout(() => card.classList.remove("card-search-highlight"), 4000);
+          }
+        });
+
+        if (matchedCard) {
+          matchedCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+          const targetSection = document.getElementById("package") || document.getElementById("destination");
+          if (targetSection) targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        const targetSection = document.getElementById("package") || document.getElementById("destination");
+        if (targetSection) targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      sendToWhatsApp(msg);
+      return;
     } else if (this.id === "package-booking-form") {
       const title = document.getElementById("pkg-title")?.textContent || "Package Booking";
       const date = document.getElementById("travel-date")?.value || "Flexible";
@@ -198,3 +241,134 @@ forms.forEach(form => {
     sendToWhatsApp(msg);
   });
 });
+
+/**
+ * Word Scroll Animation for Buttons (scrolls all words together simultaneously)
+ * Applies to all existing buttons and automatically to any newly added buttons.
+ */
+function initButtonWordRoll() {
+  const btnSelector = '.btn, .promo-btn, .packages-view-all, .gallery-view-all, .newsletter-submit-btn, [data-btn-roll]';
+
+  const applyRollToButton = (btn) => {
+    if (!btn || !(btn instanceof Element)) return;
+
+    // Skip if already converted or contains form controls
+    if (btn.querySelector('.btn-roll') || btn.querySelector('input') || btn.querySelector('select') || btn.querySelector('textarea')) {
+      return;
+    }
+
+    // Skip utility icon-only controls
+    if (btn.classList.contains('nav-close-btn') || btn.classList.contains('nav-open-btn') || 
+        btn.classList.contains('search-btn') || btn.classList.contains('places-nav-btn') ||
+        btn.classList.contains('go-top') || btn.classList.contains('whatsapp-float')) {
+      return;
+    }
+
+    // 1. Direct text nodes
+    const textNodes = Array.from(btn.childNodes).filter(
+      node => node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0
+    );
+
+    if (textNodes.length > 0) {
+      const fullText = textNodes.map(n => n.textContent.trim()).join(' ');
+
+      if (fullText.length > 0) {
+        const rollWrapper = document.createElement('span');
+        rollWrapper.className = 'btn-roll';
+        rollWrapper.innerHTML = `
+          <span class="btn-roll-text">${fullText}</span>
+          <span class="btn-roll-text" aria-hidden="true">${fullText}</span>
+        `;
+
+        textNodes[0].replaceWith(rollWrapper);
+        for (let i = 1; i < textNodes.length; i++) {
+          textNodes[i].remove();
+        }
+        return;
+      }
+    }
+
+    // 2. Text wrapped inside a simple child <span> (e.g. <span>Explore Deals</span>)
+    const childSpans = Array.from(btn.children).filter(el => 
+      el.tagName === 'SPAN' && 
+      !el.classList.contains('btn-roll') && 
+      !el.classList.contains('btn-arrow-circle') && 
+      !el.classList.contains('view-all-circle') && 
+      !el.querySelector('ion-icon')
+    );
+
+    if (childSpans.length === 1 && childSpans[0].textContent.trim().length > 0) {
+      const fullText = childSpans[0].textContent.trim();
+      const rollWrapper = document.createElement('span');
+      rollWrapper.className = 'btn-roll';
+      rollWrapper.innerHTML = `
+        <span class="btn-roll-text">${fullText}</span>
+        <span class="btn-roll-text" aria-hidden="true">${fullText}</span>
+      `;
+      childSpans[0].replaceWith(rollWrapper);
+    }
+  };
+
+  document.querySelectorAll(btnSelector).forEach(applyRollToButton);
+
+  // Setup MutationObserver so ANY button added to the page in the future automatically receives the animation
+  if (!window._btnRollObserverSetup && typeof MutationObserver !== 'undefined') {
+    window._btnRollObserverSetup = true;
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            if (node.matches && node.matches(btnSelector)) {
+              applyRollToButton(node);
+            }
+            if (node.querySelectorAll) {
+              node.querySelectorAll(btnSelector).forEach(applyRollToButton);
+            }
+          }
+        });
+      });
+    });
+    observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initButtonWordRoll);
+} else {
+  initButtonWordRoll();
+}
+
+/**
+ * Top Places Carousel Controls
+ */
+const placesTrack = document.querySelector("[data-places-track]");
+const placesPrevBtn = document.querySelector("[data-places-prev]");
+const placesNextBtn = document.querySelector("[data-places-next]");
+
+if (placesTrack && placesPrevBtn && placesNextBtn) {
+  const getScrollStep = () => {
+    const firstCard = placesTrack.querySelector(".place-card");
+    return firstCard ? firstCard.offsetWidth + 22 : 302;
+  };
+
+  const updatePlacesNavState = () => {
+    const isAtStart = placesTrack.scrollLeft <= 8;
+    const isAtEnd = placesTrack.scrollLeft + placesTrack.clientWidth >= placesTrack.scrollWidth - 8;
+    placesPrevBtn.style.opacity = isAtStart ? "0.45" : "1";
+    placesPrevBtn.style.pointerEvents = isAtStart ? "none" : "auto";
+    placesNextBtn.style.opacity = isAtEnd ? "0.45" : "1";
+    placesNextBtn.style.pointerEvents = isAtEnd ? "none" : "auto";
+  };
+
+  placesPrevBtn.addEventListener("click", () => {
+    placesTrack.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
+  });
+
+  placesNextBtn.addEventListener("click", () => {
+    placesTrack.scrollBy({ left: getScrollStep(), behavior: "smooth" });
+  });
+
+  placesTrack.addEventListener("scroll", updatePlacesNavState, { passive: true });
+  window.addEventListener("resize", updatePlacesNavState);
+  updatePlacesNavState();
+}

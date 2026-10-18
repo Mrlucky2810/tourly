@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css?v=4.8">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,60 +25,17 @@
   <!-- 
     - #HEADER
   -->
-  <header class="header active" data-header>
+  <header class="header" data-header>
 
     <div class="overlay" data-overlay></div>
-
-    <div class="header-top">
-      <div class="container">
-
-        <a href="tel:+10123456790" class="helpline-box">
-          <div class="icon-box">
-            <ion-icon name="call-outline"></ion-icon>
-          </div>
-          <div class="wrapper">
-            <p class="helpline-title">For Further Inquiries:</p>
-            <p class="helpline-number">+1 (012) 345-6790</p>
-          </div>
-        </a>
-
-        <a href="index.html" class="logo">
-          <img src="./assets/images/logo.svg" alt="Tourly logo">
-        </a>
-
-        <div class="header-btn-group">
-          <button class="search-btn" aria-label="Search Packages">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-
-          <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
-            <ion-icon name="menu-outline"></ion-icon>
-          </button>
-        </div>
-
-      </div>
-    </div>
 
     <div class="header-bottom">
       <div class="container">
 
-        <ul class="social-list">
-          <li>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-          <li>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-        </ul>
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.svg" alt="Tourly logo" class="logo-light">
+          <img src="./assets/images/logo-blue.svg" alt="Tourly logo" class="logo-dark">
+        </a>
 
         <nav class="navbar" data-navbar>
 
@@ -115,7 +72,17 @@
 
         </nav>
 
-        <a href="packages.html" class="btn btn-primary">Book Now</a>
+        <div class="header-btn-group">
+          <button class="search-btn" aria-label="Search Packages">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+
+          <a href="packages.html" class="btn btn-primary">Book Now</a>
+
+          <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
 
       </div>
     </div>
@@ -389,59 +356,134 @@
     - #FOOTER
   -->
   <footer class="footer">
+
+    <!-- Luminous Ambient Orbs with the same light blue gradient -->
+    <div class="footer-shape footer-shape-1" aria-hidden="true"></div>
+    <div class="footer-shape footer-shape-2" aria-hidden="true"></div>
+
     <div class="footer-top">
       <div class="container">
+
+        <!-- Column 1: Brand & About & Socials -->
         <div class="footer-brand">
           <a href="index.html" class="logo">
             <img src="./assets/images/logo.svg" alt="Tourly logo">
           </a>
+
           <p class="footer-text">
-            Tourly is your trusted global travel companion. We offer handpicked hotel stays, guided expeditions, and hassle-free booking services worldwide.
+            Tourly is your premier sacred pilgrimage & holiday travel companion across India. We offer handpicked hotel stays, guided yatras, and hassle-free booking services.
           </p>
+
+          <div class="footer-social-list">
+            <a href="https://wa.me/10123456790" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </div>
         </div>
 
-        <div class="footer-contact">
-          <h4 class="contact-title">Contact Us</h4>
-          <p class="contact-text">Feel free to reach out for bookings & travel inquiries!</p>
-          <ul>
-            <li class="contact-item">
-              <ion-icon name="call-outline"></ion-icon>
-              <a href="tel:+10123456790" class="contact-link">+1 (012) 345-6790</a>
-            </li>
-            <li class="contact-item">
-              <ion-icon name="mail-outline"></ion-icon>
-              <a href="mailto:info@tourly.com" class="contact-link">info@tourly.com</a>
-            </li>
-            <li class="contact-item">
-              <ion-icon name="location-outline"></ion-icon>
-              <address>3146 Koontz St, California, USA</address>
-            </li>
+        <!-- Column 2: Quick Links (Navigation Options) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+
+          <ul class="footer-link-list">
+            <li><a href="index.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Home</a></li>
+            <li><a href="about.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> About Us</a></li>
+            <li><a href="packages.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Tour Packages</a></li>
+            <li><a href="destinations.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Top Destinations</a></li>
+            <li><a href="gallery.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Photo Gallery</a></li>
+            <li><a href="contact.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Contact & Support</a></li>
           </ul>
         </div>
 
-        <div class="footer-form">
-          <p class="form-text">Subscribe to our newsletter for exclusive travel deals & updates!</p>
-          <form action="#" class="form-wrapper">
-            <input type="email" name="email" class="input-field" placeholder="Enter Your Email Address" required>
-            <button type="submit" class="btn btn-secondary">Subscribe</button>
-          </form>
+        <!-- Column 3: Popular Yatras & Destinations (Options) -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Popular Yatras</h4>
+
+          <ul class="footer-link-list">
+            <li><a href="destination-detail.html?id=varanasi" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Varanasi Ganga Aarti</a></li>
+            <li><a href="destination-detail.html?id=ayodhya" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Ayodhya Ram Mandir</a></li>
+            <li><a href="destination-detail.html?id=prayagraj" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Prayagraj Sangam</a></li>
+            <li><a href="destination-detail.html?id=kedarnath" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Kedarnath Jyotirlinga</a></li>
+            <li><a href="destination-detail.html?id=amritsar" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Golden Temple Amritsar</a></li>
+            <li><a href="destination-detail.html?id=gaya" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Bodh Gaya Trail</a></li>
+          </ul>
         </div>
+
+        <!-- Column 4: Contact & Newsletter -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-col-title">Get In Touch</h4>
+
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+919876543210" class="footer-link">+91 98765 43210</a>
+            </li>
+
+            <li class="footer-contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:support@tourly.com" class="footer-link">support@tourly.com</a>
+            </li>
+
+            <li class="footer-contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <span>Varanasi, UP & New Delhi, India</span>
+            </li>
+          </ul>
+
+          <div class="footer-newsletter">
+            <p class="newsletter-text">Subscribe for exclusive travel deals & yatra updates:</p>
+            <form action="#" class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Tourly!');">
+              <div class="newsletter-input-group">
+                <input type="email" name="email" class="newsletter-input" placeholder="Your email address..." required>
+                <button type="submit" class="newsletter-submit-btn">
+                  <span class="btn-roll">
+                    <span class="btn-roll-text">Subscribe</span>
+                    <span class="btn-roll-text" aria-hidden="true">Subscribe</span>
+                  </span>
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container">
-        <p class="copyright">
-          &copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.
-        </p>
+
+        <p class="copyright">&copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.</p>
+
         <ul class="footer-bottom-list">
-          <li><a href="#" class="footer-bottom-link">Privacy Policy</a></li>
-          <li><a href="#" class="footer-bottom-link">Terms & Conditions</a></li>
-          <li><a href="contact.html" class="footer-bottom-link">FAQ</a></li>
+          <li>
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="terms-conditions.html" class="footer-bottom-link">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="refund-policy.html" class="footer-bottom-link">Refund Policy</a>
+          </li>
         </ul>
+
       </div>
     </div>
+
   </footer>
+
 
   <!-- Search Modal -->
   <div class="search-modal" data-search-modal>
