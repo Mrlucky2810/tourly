@@ -5,28 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Package Details - Tourly Travel Agency</title>
-  <meta name="description" content="View full itinerary, day-by-day activities, key attractions, inclusions, and book your dream vacation package with Tourly.">
+  <title>Dubai - Premium Package Details | Tourly</title>
+  <meta name="description" content="Discover Dubai with our premium vacation package. Experience Burj Khalifa, Desert Safari, Marina Dhow Cruise, luxury stays and seamless private transfers.">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=4.8">
+  <link rel="stylesheet" href="./assets/css/style.css?v=5.3">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body id="top">
+<body id="top" class="pkg-detail-page">
 
   <!-- 
     - #HEADER
   -->
   <header class="header active" data-header data-header-fixed>
-
     <div class="overlay" data-overlay></div>
 
     <div class="header-bottom">
@@ -38,7 +37,6 @@
         </a>
 
         <nav class="navbar" data-navbar>
-
           <div class="navbar-top">
             <a href="index.html" class="logo">
               <img src="./assets/images/logo-blue.svg" alt="Tourly logo">
@@ -51,13 +49,11 @@
 
           <ul class="navbar-list">
             <li><a href="index.html" class="navbar-link" data-nav-link>Home</a></li>
-            <li><a href="about.html" class="navbar-link" data-nav-link>About Us</a></li>
-            <li><a href="destinations.html" class="navbar-link" data-nav-link>Destinations</a></li>
             <li><a href="packages.html" class="navbar-link active" data-nav-link>Packages</a></li>
-            <li><a href="gallery.html" class="navbar-link" data-nav-link>Gallery</a></li>
+            <li><a href="destinations.html" class="navbar-link" data-nav-link>Top Destinations</a></li>
+            <li><a href="about.html" class="navbar-link" data-nav-link>About Us</a></li>
             <li><a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a></li>
           </ul>
-
         </nav>
 
         <div class="header-btn-group">
@@ -65,7 +61,9 @@
             <ion-icon name="search-outline"></ion-icon>
           </button>
 
-          <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20would%20like%20to%20book%20a%20package!" target="_blank" class="btn btn-whatsapp"><ion-icon name="logo-whatsapp"></ion-icon> Book</a>
+          <a href="#booking-card" class="btn btn-outline" style="border: 1.5px solid #0f172a; border-radius: 9999px; padding: 8px 20px; font-weight: 700; font-size: 13px; color: #0f172a;">
+            Plan Your Trip
+          </a>
 
           <button class="nav-open-btn" aria-label="Open Navigation Menu" data-nav-open-btn>
             <ion-icon name="menu-outline"></ion-icon>
@@ -74,472 +72,648 @@
 
       </div>
     </div>
-
   </header>
 
-  <main style="padding-top: 100px;">
-    <article class="container" style="padding-block: 40px;">
+  <main style="padding-top: 85px;">
 
-      <!-- Breadcrumb -->
-      <ul class="breadcrumb-list" style="justify-content: flex-start; margin-bottom: 25px;">
-        <li><a href="index.html" class="breadcrumb-link" style="color: var(--black-coral);">Home</a></li>
-        <li>&gt;</li>
-        <li><a href="packages.html" class="breadcrumb-link" style="color: var(--black-coral);">Packages</a></li>
-        <li>&gt;</li>
-        <li class="breadcrumb-item active" id="pkg-breadcrumb">Kashi, Ayodhya & Prayagraj Sacred Yatra</li>
-      </ul>
-
-      <!-- Detail Banner Hero -->
-      <div class="detail-banner">
-        <img src="./assets/images/varanasi.jpg" alt="Package Banner Image" id="pkg-banner-img">
-        <div class="detail-banner-overlay">
-          <h1 class="detail-title" id="pkg-title">Kashi, Ayodhya & Prayagraj Sacred Yatra</h1>
-          <div class="detail-meta-tags">
-            <div class="meta-tag-pill">
-              <ion-icon name="location-outline"></ion-icon>
-              <span id="pkg-location">India</span>
-            </div>
-            <div class="meta-tag-pill">
-              <ion-icon name="time-outline"></ion-icon>
-              <span id="pkg-duration">7 Days / 6 Nights</span>
-            </div>
-            <div class="meta-tag-pill">
-              <ion-icon name="people-outline"></ion-icon>
-              <span id="pkg-pax">Max: 10 People</span>
-            </div>
-            <div class="meta-tag-pill" style="background: var(--bright-navy-blue);">
-              <ion-icon name="star"></ion-icon>
-              <span id="pkg-rating">4.9 (25 Reviews)</span>
-            </div>
-          </div>
-        </div>
+    <!-- 
+      - #HERO BANNER (FRAMED)
+    -->
+    <div class="pkg-hero-banner-wrapper">
+      <div class="pkg-hero-banner">
+        <img src="./assets/images/dubai-skyline.jpg" alt="Dubai City Skyline at Sunset" id="pkg-hero-img">
       </div>
+    </div>
 
-      <!-- Main Layout with Sticky Booking Sidebar -->
-      <div class="detail-layout">
+    <!-- 
+      - #MAIN PACKAGE CONTENT & BOOKING FORM GRID
+    -->
+    <section class="pkg-detail-container">
+      <div class="pkg-detail-grid">
 
-        <!-- Left Column: Content Tabs & Blocks -->
-        <div class="detail-main">
+        <!-- Left Column: Details & Day-by-Day Itinerary -->
+        <div class="pkg-detail-main">
 
-          <!-- Sticky Navigation Tabs -->
-          <div class="detail-tabs">
-            <a href="#overview" class="detail-tab-btn active">Overview</a>
-            <a href="#itinerary" class="detail-tab-btn">Itinerary</a>
-            <a href="#attractions" class="detail-tab-btn">Attractions</a>
-            <a href="#inclusions" class="detail-tab-btn">Inclusions</a>
-            <a href="#reviews" class="detail-tab-btn">Reviews</a>
+          <!-- Rating Header -->
+          <div class="pkg-top-rating">
+            <span class="stars">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </span>
+            <span>5.0</span>
+            <span class="reviews-count">(42 Reviews)</span>
           </div>
 
-          <!-- Section 1: Overview -->
-          <div class="detail-section-block" id="overview">
-            <h3 class="detail-section-title">Package Overview</h3>
-            <p class="section-text" style="text-align: left; margin-inline: 0;" id="pkg-overview-p1">
-              Embark on a divine 6-Day Kashi, Ayodhya & Prayagraj Sacred Yatra, designed for devotees seeking spiritual rejuvenation across India's most venerated pilgrimage destinations. This curated package includes 4-star hotel stays, VIP temple darshan assistance, private AC transfers, and guided Ganga Aarti experiences.
-            </p>
-            <p class="section-text" style="text-align: left; margin-inline: 0;" id="pkg-overview-p2">
-              From witnessing the grand evening Ganga Aarti in Varanasi to taking a holy dip at Triveni Sangam in Prayagraj and praying at the majestic Shri Ram Janmabhoomi Mandir in Ayodhya, our local spiritual guides ensure every ritual and journey is seamless.
-            </p>
+          <!-- Main Package Title -->
+          <h1 class="pkg-main-title" id="pkg-display-title">Dubai</h1>
+
+          <!-- Meta Attributes Row -->
+          <div class="pkg-attributes-row">
+            <span class="pkg-attr-item">
+              <ion-icon name="time-outline"></ion-icon>
+              <span id="pkg-attr-duration">5D / 4N (Transfer Included)</span>
+            </span>
+            <span class="pkg-attr-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <span>1 Country, 1 City</span>
+            </span>
+            <span class="pkg-attr-item">
+              <ion-icon name="people-outline"></ion-icon>
+              <span>Max: 14 People</span>
+            </span>
           </div>
 
-          <!-- Section 2: Day-by-Day Itinerary -->
-          <div class="detail-section-block" id="itinerary">
-            <h3 class="detail-section-title">Day-by-Day Yatra Itinerary</h3>
+          <!-- Guarantee Badge -->
+          <div class="pkg-sub-guarantee">
+            <span class="pkg-badge-green-pill">
+              <ion-icon name="checkmark-circle"></ion-icon> 4.9 Superb (12 reviews)
+            </span>
+            <span>•</span>
+            <span class="pkg-free-cancel-tag">Free cancellation</span>
+          </div>
 
-            <div class="itinerary-timeline">
+          <!-- Price Display -->
+          <div class="pkg-price-badge-row">
+            <span class="pkg-save-tag">Save 18%</span>
+            <div class="pkg-price-row">
+              <span class="pkg-price-amount" id="pkg-main-price">USD 1,299</span>
+              <span class="pkg-price-unit">/ per person</span>
+            </div>
+            <p class="pkg-price-footnote">Taxes & fees included • Instant booking confirmation</p>
+          </div>
 
-              <div class="itinerary-day-card">
-                <span class="day-badge">Day 1</span>
-                <h4 class="day-title">Arrival in Varanasi & Evening Ganga Aarti</h4>
-                <p class="day-description">
-                  Arrive at Varanasi Railway Station or Airport where your private driver welcomes you for transfer to your hotel. In the evening, witness the divine Ganga Aarti at Dashashwamedh Ghat from a private boat.
-                </p>
-                <div class="day-highlights">
-                  <span class="highlight-chip">VIP Transfer</span>
-                  <span class="highlight-chip">Hotel Check-In</span>
-                  <span class="highlight-chip">Ganga Aarti Boat Ride</span>
+          <!-- Choose Trip Duration -->
+          <div class="pkg-duration-section">
+            <h3 class="pkg-section-label">Choose Trip Duration</h3>
+            <div class="pkg-duration-grid">
+
+              <!-- Duration Option 1 -->
+              <div class="pkg-duration-card" data-duration="4d" data-price="USD 1,099" data-days="4D / 3N">
+                <div class="pkg-duration-thumb">
+                  <img src="./assets/images/offer-beach.jpg" alt="4 Days Dubai Gateway">
                 </div>
+                <h4 class="pkg-duration-title">4D / 3N</h4>
+                <p class="pkg-duration-price">Starting from USD 1,099</p>
               </div>
 
-              <div class="itinerary-day-card">
-                <span class="day-badge">Day 2</span>
-                <h4 class="day-title">Kashi Vishwanath VIP Darshan & Sarnath Tour</h4>
-                <p class="day-description">
-                  Early morning sunrise boat ride on the Ganges followed by VIP temple darshan at Shri Kashi Vishwanath, Annapurna Devi, and Kaal Bhairav Mandir. Afternoon excursion to Sarnath Dhamek Stupa.
-                </p>
-                <div class="day-highlights">
-                  <span class="highlight-chip">Sunrise Boat Cruise</span>
-                  <span class="highlight-chip">VIP Kashi Darshan</span>
-                  <span class="highlight-chip">Sarnath Tour</span>
+              <!-- Duration Option 2 (Active by default) -->
+              <div class="pkg-duration-card active" data-duration="5d" data-price="USD 1,299" data-days="5D / 4N">
+                <div class="pkg-duration-thumb">
+                  <img src="./assets/images/dubai-skyline.jpg" alt="5 Days Premium Dubai">
                 </div>
-              </div>
-
-              <div class="itinerary-day-card">
-                <span class="day-badge">Day 3</span>
-                <h4 class="day-title">Varanasi to Prayagraj & Triveni Sangam Holy Dip</h4>
-                <p class="day-description">
-                  Drive to Prayagraj (approx. 2.5 hours). Take a private ceremonial boat to Triveni Sangam for a holy dip at the confluence of Ganga, Yamuna, and Saraswati. Visit Bade Hanuman Mandir & Anand Bhawan.
-                </p>
-                <div class="day-highlights">
-                  <span class="highlight-chip">Prayagraj Drive</span>
-                  <span class="highlight-chip">Sangam Holy Bath</span>
-                  <span class="highlight-chip">Hanuman Mandir</span>
-                </div>
-              </div>
-
-              <div class="itinerary-day-card">
-                <span class="day-badge">Day 4</span>
-                <h4 class="day-title">Prayagraj to Ayodhya & Saryu River Aarti</h4>
-                <p class="day-description">
-                  Proceed to the holy city of Ayodhya. Check into your hotel and visit the sacred Saryu Ghats in the evening to attend the beautiful Saryu River Aarti and light clay diyas.
-                </p>
-                <div class="day-highlights">
-                  <span class="highlight-chip">Ayodhya Transfer</span>
-                  <span class="highlight-chip">Saryu Ghats</span>
-                  <span class="highlight-chip">Evening Aarti</span>
-                </div>
-              </div>
-
-              <div class="itinerary-day-card">
-                <span class="day-badge">Day 5</span>
-                <h4 class="day-title">Shri Ram Janmabhoomi & Hanuman Garhi Darshan</h4>
-                <p class="day-description">
-                  Full day dedicated to Ayodhya holy temples: special morning darshan at Shri Ram Janmabhoomi Mandir, Hanuman Garhi, Kanak Bhawan, and Dashrath Mahal.
-                </p>
-                <div class="day-highlights">
-                  <span class="highlight-chip">Ram Janmabhoomi</span>
-                  <span class="highlight-chip">Hanuman Garhi</span>
-                  <span class="highlight-chip">Kanak Bhawan</span>
-                </div>
-              </div>
-
-              <div class="itinerary-day-card">
-                <span class="day-badge">Day 6</span>
-                <h4 class="day-title">Local Prasad Shopping & Departure</h4>
-                <p class="day-description">
-                  Enjoy breakfast at the hotel, purchase authentic peda prasad and religious souvenirs, followed by private chauffeur drop-off at Ayodhya/Varanasi airport or railway station.
-                </p>
-                <div class="day-highlights">
-                  <span class="highlight-chip">Buffet Breakfast</span>
-                  <span class="highlight-chip">Prasad Shopping</span>
-                  <span class="highlight-chip">Return Drop</span>
-                </div>
+                <h4 class="pkg-duration-title">5D / 4N</h4>
+                <p class="pkg-duration-price">Starting from USD 1,299</p>
               </div>
 
             </div>
           </div>
 
-          <!-- Section 3: Attractions -->
-          <div class="detail-section-block" id="attractions">
-            <h3 class="detail-section-title">Featured Yatra Highlights</h3>
+          <hr class="pkg-divider-line">
 
-            <div class="attractions-grid">
-
-              <div class="attraction-card">
-                <img src="./assets/images/varanasi.jpg" alt="Varanasi Ganga Aarti" class="attraction-img">
-                <div class="attraction-body">
-                  <h4 class="attraction-title">Varanasi Kashi Vishwanath</h4>
-                  <p class="attraction-text">Holy Jyotirlinga shrine & evening Ganga Aarti ceremonies at Dashashwamedh Ghat.</p>
-                </div>
-              </div>
-
-              <div class="attraction-card">
-                <img src="./assets/images/ayodhya.jpg" alt="Ayodhya Ram Mandir" class="attraction-img">
-                <div class="attraction-body">
-                  <h4 class="attraction-title">Ayodhya Ram Janmabhoomi</h4>
-                  <p class="attraction-text">The grand Shri Ram temple complex, Hanuman Garhi & serene Saryu riverfront.</p>
-                </div>
-              </div>
-
-              <div class="attraction-card">
-                <img src="./assets/images/prayagraj.jpg" alt="Prayagraj Sangam" class="attraction-img">
-                <div class="attraction-body">
-                  <h4 class="attraction-title">Prayagraj Triveni Sangam</h4>
-                  <p class="attraction-text">Sacred river confluence for holy dips, boat rides, and Bade Hanuman darshan.</p>
-                </div>
-              </div>
-
+          <!-- Itinerary Header -->
+          <div class="pkg-itinerary-header">
+            <div class="pkg-itinerary-title-box">
+              <h3>Itinerary</h3>
+              <p class="pkg-itinerary-meta">5 Days plan • Meal plan: Breakfast & Dinner</p>
             </div>
+            <a href="javascript:void(0)" class="pkg-download-pdf" onclick="alert('Downloading Dubai 5-Day Official Itinerary PDF...');">
+              <ion-icon name="document-text-outline"></ion-icon>
+              <span>Download Full Itinerary (PDF)</span>
+            </a>
           </div>
 
-          <!-- Section 4: Inclusions & Exclusions -->
-          <div class="detail-section-block" id="inclusions">
-            <h3 class="detail-section-title">What's Included & Excluded</h3>
+          <!-- Day-by-Day Accordion -->
+          <div class="pkg-itinerary-list">
 
-            <div class="inc-exc-grid">
-              <div class="inc-box">
-                <h4><ion-icon name="checkmark-circle" class="icon-check"></ion-icon> What Is Included</h4>
-                <div class="inc-exc-list">
-                  <div class="inc-item">
-                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
-                    <span>6 Nights accommodation in 5-star beachfront resort</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
-                    <span>Daily breakfast buffet & 3 special dinners included</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
-                    <span>Round-trip private airport vehicle transfers</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
-                    <span>All tour entry fees, speedboat charters & snorkeling gear</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="checkmark" class="icon-check"></ion-icon>
-                    <span>Certified English-speaking local tour guide</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="exc-box">
-                <h4><ion-icon name="close-circle" class="icon-cross"></ion-icon> What Is Excluded</h4>
-                <div class="inc-exc-list">
-                  <div class="inc-item">
-                    <ion-icon name="close" class="icon-cross"></ion-icon>
-                    <span>International airline flight tickets</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="close" class="icon-cross"></ion-icon>
-                    <span>Personal expenses & alcoholic beverages</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="close" class="icon-cross"></ion-icon>
-                    <span>Travel insurance & passport visa fees</span>
-                  </div>
-                  <div class="inc-item">
-                    <ion-icon name="close" class="icon-cross"></ion-icon>
-                    <span>Discretionary tips for driver & tour guides</span>
-                  </div>
+            <!-- Day 1 -->
+            <div class="pkg-itinerary-item active">
+              <button class="pkg-itinerary-btn" type="button" aria-expanded="true">
+                <span class="pkg-itinerary-day-title">Day 1: Arrival in Dubai & Evening Dhow Cruise</span>
+                <ion-icon name="chevron-down-outline" class="pkg-itinerary-arrow"></ion-icon>
+              </button>
+              <div class="pkg-itinerary-collapse">
+                <div class="pkg-itinerary-inner">
+                  <p class="pkg-itinerary-desc">
+                    Arrive at Dubai International Airport (DXB). Meet your private chauffeur for transfer to your luxury 5-star hotel in Dubai Marina. In the evening, step aboard an illuminated traditional Marina Dhow Cruise for a 2-hour international buffet dinner, soft drinks, and live Tanoura folklore dance performances under the neon cityscape.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Section 5: Reviews -->
-          <div class="detail-section-block" id="reviews">
-            <h3 class="detail-section-title">Traveler Reviews</h3>
-
-            <div class="values-grid">
-              <div class="value-card" style="text-align: left;">
-                <div style="color: gold; font-size: 18px; margin-bottom: 8px;">
-                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+            <!-- Day 2 -->
+            <div class="pkg-itinerary-item">
+              <button class="pkg-itinerary-btn" type="button" aria-expanded="false">
+                <span class="pkg-itinerary-day-title">Day 2: Dubai City Tour & Burj Khalifa 124th Floor Visit</span>
+                <ion-icon name="chevron-down-outline" class="pkg-itinerary-arrow"></ion-icon>
+              </button>
+              <div class="pkg-itinerary-collapse">
+                <div class="pkg-itinerary-inner">
+                  <p class="pkg-itinerary-desc">
+                    Embark on a guided morning city excursion covering the iconic Dubai Frame, Museum of the Future photo stop, and Jumeirah Beach. Afternoon visit to the world-famous Dubai Mall followed by fast-track VIP elevator access to the 124th & 125th observation deck of Burj Khalifa. Conclude with the synchronized Dubai Fountain evening show.
+                  </p>
                 </div>
-                <p class="card-text" style="font-style: italic;">
-                  "Unbelievable beach vacation! The speedboat tour and sunset catamaran cruise were highlight moments of our year."
-                </p>
-                <h5 style="margin-top: 10px; color: var(--gunmetal);">— Jessica & Tom K.</h5>
-              </div>
-
-              <div class="value-card" style="text-align: left;">
-                <div style="color: gold; font-size: 18px; margin-bottom: 8px;">
-                  <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
-                </div>
-                <p class="card-text" style="font-style: italic;">
-                  "Everything ran smoothly from airport pick-up to resort checkout. Highly recommended Tourly package!"
-                </p>
-                <h5 style="margin-top: 10px; color: var(--gunmetal);">— Liam Harrison</h5>
               </div>
             </div>
+
+            <!-- Day 3 -->
+            <div class="pkg-itinerary-item">
+              <button class="pkg-itinerary-btn" type="button" aria-expanded="false">
+                <span class="pkg-itinerary-day-title">Day 3: Desert Safari & BBQ Dinner</span>
+                <ion-icon name="chevron-down-outline" class="pkg-itinerary-arrow"></ion-icon>
+              </button>
+              <div class="pkg-itinerary-collapse">
+                <div class="pkg-itinerary-inner">
+                  <p class="pkg-itinerary-desc">
+                    Enjoy a relaxed morning at the hotel pool. In the afternoon, a 4x4 Land Cruiser picks you up for an adrenaline-charged dune bashing experience across Lahbab's red dunes. Experience sandboarding, sunset photography, camel riding, henna tattoos, and a 5-star gourmet BBQ buffet dinner accompanied by fire shows and live Arabian music.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="pkg-itinerary-item">
+              <button class="pkg-itinerary-btn" type="button" aria-expanded="false">
+                <span class="pkg-itinerary-day-title">Day 4: Abu Dhabi Day Trip incl. Sheikh Zayed Grand Mosque</span>
+                <ion-icon name="chevron-down-outline" class="pkg-itinerary-arrow"></ion-icon>
+              </button>
+              <div class="pkg-itinerary-collapse">
+                <div class="pkg-itinerary-inner">
+                  <p class="pkg-itinerary-desc">
+                    Full-day scenic drive to the UAE capital, Abu Dhabi. Tour the breathtaking white marble Sheikh Zayed Grand Mosque, drive past Emirates Palace and the Corniche waterfront, and stop for photo opportunities outside Louvre Abu Dhabi and Ferrari World on Yas Island.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="pkg-itinerary-item">
+              <button class="pkg-itinerary-btn" type="button" aria-expanded="false">
+                <span class="pkg-itinerary-day-title">Day 5: Airport Drop</span>
+                <ion-icon name="chevron-down-outline" class="pkg-itinerary-arrow"></ion-icon>
+              </button>
+              <div class="pkg-itinerary-collapse">
+                <div class="pkg-itinerary-inner">
+                  <p class="pkg-itinerary-desc">
+                    Relish your final lavish breakfast at the hotel. Spend your free morning souvenir shopping for gold, spices, and perfumes in Old Dubai’s Deira Souks. Your private chauffeur will escort you to DXB International Airport in plenty of time for your scheduled departure flight.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
 
-        <!-- Right Column: Sticky Booking Widget -->
-        <aside class="booking-widget" id="booking-section">
-          <div class="price-header">
-            <div class="price-amount" style="font-size: 24px;">Price On Request</div>
-            <span class="price-period">Customized all-inclusive tour pricing</span>
+        <!-- Right Column: Sticky Booking Widget Card -->
+        <aside class="pkg-booking-sidebar" id="booking-card">
+          <div class="pkg-booking-widget-card">
+
+            <!-- Badges -->
+            <div class="pkg-widget-badges">
+              <span class="pkg-widget-rating">
+                <ion-icon name="star"></ion-icon> 4.9 Superb (18 Reviews)
+              </span>
+              <span class="pkg-widget-guarantee">Best Price Guarantee</span>
+            </div>
+
+            <h3 class="pkg-widget-pkg-name">Premium Dubai Escape</h3>
+            <p class="pkg-widget-price-line">
+              <strong id="pkg-widget-price">USD 1,299</strong> / Per Person
+            </p>
+
+            <!-- Booking Form -->
+            <form id="dubai-booking-form" onsubmit="event.preventDefault(); alert('Booking request submitted! Our concierge will contact you via WhatsApp & email within 15 minutes.');">
+
+              <div class="pkg-form-group">
+                <label class="pkg-form-label">Full Name*</label>
+                <input type="text" class="pkg-form-input" placeholder="John Doe" required>
+              </div>
+
+              <div class="pkg-form-group">
+                <label class="pkg-form-label">Email Address*</label>
+                <input type="email" class="pkg-form-input" placeholder="name@your-domain.com" required>
+              </div>
+
+              <div class="pkg-form-group">
+                <label class="pkg-form-label">Phone Number*</label>
+                <input type="tel" class="pkg-form-input" placeholder="+1 (555) 000-0000" required>
+              </div>
+
+              <div class="pkg-form-row">
+                <div class="pkg-form-group">
+                  <label class="pkg-form-label">Travel Date*</label>
+                  <input type="date" class="pkg-form-input" required>
+                </div>
+
+                <div class="pkg-form-group">
+                  <label class="pkg-form-label">Number of Travelers*</label>
+                  <select class="pkg-form-input" required>
+                    <option value="1">1 Traveler</option>
+                    <option value="2" selected>2 Travelers</option>
+                    <option value="3">3 Travelers</option>
+                    <option value="4">4+ Travelers</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pkg-form-group">
+                <label class="pkg-form-label">Special Request / Notes</label>
+                <textarea class="pkg-form-textarea" placeholder="Tell us your preferences..."></textarea>
+              </div>
+
+              <div class="pkg-widget-reassurance">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <span>Pay secure online • Free cancellation up to 48 hours</span>
+              </div>
+
+              <button type="submit" class="btn-pkg-submit">
+                <span>Book This Package</span>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
+
+            </form>
+
           </div>
-
-          <form action="#" id="package-booking-form">
-            <div class="form-group">
-              <label for="travel-date">Select Travel Date*</label>
-              <input type="date" id="travel-date" class="input-field" required>
-            </div>
-
-            <div class="form-group">
-              <label for="guest-count">Number of Travelers*</label>
-              <select id="guest-count" class="input-field" required>
-                <option value="1">1 Person</option>
-                <option value="2" selected>2 Persons</option>
-                <option value="3">3 Persons</option>
-                <option value="4">4 Persons</option>
-                <option value="5">5+ Persons (Group Quote)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="guest-email">Your Email Address*</label>
-              <input type="email" id="guest-email" class="input-field" placeholder="email@example.com" required>
-            </div>
-
-            <div class="form-group">
-              <label for="guest-phone">Phone Number*</label>
-              <input type="tel" id="guest-phone" class="input-field" placeholder="+1 (555) 000-0000" required>
-            </div>
-
-            <!-- Calculated Summary Box -->
-            <div class="booking-summary-box">
-              <div class="booking-summary-row">
-                <span>Trip Consultation:</span>
-                <span style="color: #2e7d32; font-weight: bold;">Free</span>
-              </div>
-              <div class="booking-summary-row">
-                <span>Hotels & Transfers:</span>
-                <span>Included</span>
-              </div>
-              <div class="booking-summary-row total">
-                <span>Price Quote:</span>
-                <span style="color: var(--bright-navy-blue);">Via WhatsApp</span>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding-block: 14px; font-weight: var(--fw-700);">
-              <ion-icon name="logo-whatsapp"></ion-icon> Book Via WhatsApp
-            </button>
-          </form>
-
-          <p style="text-align: center; font-size: 12px; color: var(--spanish-gray); margin-top: 15px;">
-            <ion-icon name="shield-checkmark-outline"></ion-icon> Free cancellation up to 14 days before trip date.
-          </p>
         </aside>
 
       </div>
+    </section>
 
-    </article>
+    <!-- 
+      - #EXCLUSIVE OFFERS SECTION (4 CARDS)
+    -->
+    <section class="exclusive-offers-section">
+      <div class="pkg-detail-container">
+
+        <div class="offers-header">
+          <h2 class="offers-title">Exclusive Offers</h2>
+          <p class="offers-subtitle">Find the best deals for even more adventures.</p>
+        </div>
+
+        <div class="offers-grid">
+
+          <!-- Offer Card 1 -->
+          <div class="offer-card">
+            <div class="offer-card-media">
+              <img src="./assets/images/offer-beach.jpg" alt="Tropical Luxury Resort" loading="lazy">
+              <span class="offer-badge tag-green">EXCLUSIVE</span>
+            </div>
+            <div class="offer-card-body">
+              <h3 class="offer-card-title">Up to 40% OFF + Complimentary Breakfast</h3>
+              <p class="offer-card-desc">On select luxury resorts across Southeast Asia.</p>
+              <div class="offer-card-actions">
+                <a href="#booking-card" class="btn-offer-book">Book Now</a>
+                <a href="javascript:void(0)" class="offer-terms-link" onclick="alert('Terms: Valid for bookings made 30 days in advance. Includes daily gourmet breakfast.');">View terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Offer Card 2 -->
+          <div class="offer-card">
+            <div class="offer-card-media">
+              <img src="./assets/images/offer-desert.jpg" alt="Dubai Desert Dunes" loading="lazy">
+              <span class="offer-badge tag-cyan">POPULAR</span>
+            </div>
+            <div class="offer-card-body">
+              <h3 class="offer-card-title">Dubai Desert Safari Free with Booking</h3>
+              <p class="offer-card-desc">Get all-inclusive desert dune tours on pre-booked year-round holiday.</p>
+              <div class="offer-card-actions">
+                <a href="#booking-card" class="btn-offer-book">Book Now</a>
+                <a href="javascript:void(0)" class="offer-terms-link" onclick="alert('Terms: Free Desert Safari included with every 5+ day booking.');">View terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Offer Card 3 -->
+          <div class="offer-card">
+            <div class="offer-card-media">
+              <img src="./assets/images/offer-dinner.jpg" alt="Beach Dinner at Sunset" loading="lazy">
+              <span class="offer-badge tag-purple">LIMITED TIME</span>
+            </div>
+            <div class="offer-card-body">
+              <h3 class="offer-card-title">Get up 44% off* + Interest Free EMI</h3>
+              <p class="offer-card-desc">Book flight + hotel bundles with easy flex payments for your upcoming trips.</p>
+              <div class="offer-card-actions">
+                <a href="#booking-card" class="btn-offer-book">Book Now</a>
+                <a href="javascript:void(0)" class="offer-terms-link" onclick="alert('Terms: 0% APR available on major credit cards across 3, 6, and 12-month installments.');">View terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Offer Card 4 -->
+          <div class="offer-card">
+            <div class="offer-card-media">
+              <img src="./assets/images/offer-friends.jpg" alt="Happy Friends on Beach" loading="lazy">
+              <span class="offer-badge tag-magenta">FLASH DEAL</span>
+            </div>
+            <div class="offer-card-body">
+              <h3 class="offer-card-title">For Worry-free Travel: Grab Up to 30% OFF*</h3>
+              <p class="offer-card-desc">Full-fare cancellation shield and priority passes on selected tour packages.</p>
+              <div class="offer-card-actions">
+                <a href="#booking-card" class="btn-offer-book">Book Now</a>
+                <a href="javascript:void(0)" class="offer-terms-link" onclick="alert('Terms: Includes complete trip cancellation protection and flexible reschedule policy.');">View terms</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 
+      - #WHAT OUR TRAVELERS SAY (TESTIMONIAL SPOTLIGHT)
+    -->
+    <section class="travelers-say-section">
+      <div class="pkg-detail-container">
+
+        <div class="travelers-header">
+          <h2 class="travelers-title">What Our Travelers Say</h2>
+          <p class="travelers-subtitle">Real experiences from people who traveled with us across the globe.</p>
+        </div>
+
+        <div class="traveler-spotlight-wrapper">
+
+          <!-- Left Navigation Arrow -->
+          <button class="traveler-nav-arrow prev" aria-label="Previous Review" onclick="prevTravelerReview()">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+
+          <!-- Spotlight Card -->
+          <div class="traveler-spotlight-card" id="traveler-card">
+            <div class="traveler-card-media">
+              <img src="./assets/images/traveler-balloon.jpg" alt="Travelers in hot air balloon" id="traveler-img">
+            </div>
+            <div class="traveler-card-content">
+              <div class="traveler-verified-badge">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <span id="traveler-rating-label">Verified Review</span>
+              </div>
+              <h3 class="traveler-quote-title" id="traveler-quote-title">Unforgettable journey!</h3>
+              <p class="traveler-quote-text" id="traveler-quote-body">
+                "From booking to the transfers, everything was top-notch. Our tour guide was so knowledgeable, and the itinerary left us with memories to cherish forever."
+              </p>
+              <div class="traveler-author-box">
+                <div class="traveler-avatar" id="traveler-avatar">JW</div>
+                <div>
+                  <h4 class="traveler-author-name" id="traveler-name">James Wilson</h4>
+                  <p class="traveler-tour-name" id="traveler-tour">Dubai Discovery Tour</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Navigation Arrow -->
+          <button class="traveler-nav-arrow next" aria-label="Next Review" onclick="nextTravelerReview()">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 
+      - #FAQ SECTION (TWO COLUMNS)
+    -->
+    <section class="faq-modern" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+
+        <div class="faq-modern-header">
+          <p class="faq-modern-subtitle">Frequently Asked Questions</p>
+          <h2 class="faq-modern-title" id="faq-title">
+            Everything you need to<br>know before touring with us.
+          </h2>
+        </div>
+
+        <div class="faq-modern-grid">
+
+          <!-- Left Column -->
+          <div class="faq-modern-col">
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-modern-item" data-faq-item>
+              <button class="faq-modern-trigger" type="button" aria-expanded="false" aria-controls="faq-ans-1">
+                <span class="faq-modern-icon">
+                  <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+                </span>
+                <span class="faq-modern-question">What types of travel packages do you offer?</span>
+              </button>
+              <div class="faq-modern-collapse" id="faq-ans-1">
+                <div class="faq-modern-body">
+                  <p class="faq-modern-answer">
+                    We offer sacred pilgrimage yatras, family holidays, cultural heritage circuits, and scenic mountain getaways across India.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-modern-item" data-faq-item>
+              <button class="faq-modern-trigger" type="button" aria-expanded="false" aria-controls="faq-ans-2">
+                <span class="faq-modern-icon">
+                  <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+                </span>
+                <span class="faq-modern-question">What's included in the trip packages?</span>
+              </button>
+              <div class="faq-modern-collapse" id="faq-ans-2">
+                <div class="faq-modern-body">
+                  <p class="faq-modern-answer">
+                    Handpicked hotel stays, private AC cab transfers, guided sightseeing, daily breakfast, and 24/7 on-trip assistance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-modern-item" data-faq-item>
+              <button class="faq-modern-trigger" type="button" aria-expanded="false" aria-controls="faq-ans-3">
+                <span class="faq-modern-icon">
+                  <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+                </span>
+                <span class="faq-modern-question">Do you offer sustainable travel options?</span>
+              </button>
+              <div class="faq-modern-collapse" id="faq-ans-3">
+                <div class="faq-modern-body">
+                  <p class="faq-modern-answer">
+                    Yes! We partner with eco-friendly stays, minimize single-use plastics, and support local community artisans and guides.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column -->
+          <div class="faq-modern-col">
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-modern-item" data-faq-item>
+              <button class="faq-modern-trigger" type="button" aria-expanded="false" aria-controls="faq-ans-4">
+                <span class="faq-modern-icon">
+                  <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+                </span>
+                <span class="faq-modern-question">Can I customize my trip package?</span>
+              </button>
+              <div class="faq-modern-collapse" id="faq-ans-4">
+                <div class="faq-modern-body">
+                  <p class="faq-modern-answer">
+                    100%! You can easily customize dates, hotel categories, sightseeing spots, and special temple darshan or puja timings.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-modern-item" data-faq-item>
+              <button class="faq-modern-trigger" type="button" aria-expanded="false" aria-controls="faq-ans-5">
+                <span class="faq-modern-icon">
+                  <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+                </span>
+                <span class="faq-modern-question">How do you ensure quality?</span>
+              </button>
+              <div class="faq-modern-collapse" id="faq-ans-5">
+                <div class="faq-modern-body">
+                  <p class="faq-modern-answer">
+                    We personally inspect partner hotels, hire verified drivers, and provide dedicated 24/7 on-ground trip support.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-modern-item" data-faq-item>
+              <button class="faq-modern-trigger" type="button" aria-expanded="false" aria-controls="faq-ans-6">
+                <span class="faq-modern-icon">
+                  <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+                </span>
+                <span class="faq-modern-question">Why should I choose us for my travel needs?</span>
+              </button>
+              <div class="faq-modern-collapse" id="faq-ans-6">
+                <div class="faq-modern-body">
+                  <p class="faq-modern-answer">
+                    Honest pricing with no hidden charges, smooth VIP arrangements, and over 10,000 happy travelers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 
+      - #ADVENTURE NEVER TAKES A SEASON OFF (NEWSLETTER CTA BANNER)
+    -->
+    <section class="season-banner-section">
+      <div class="season-banner-content">
+        <h2 class="season-banner-title">Adventure never takes a season off</h2>
+        <p class="season-banner-subtitle">
+          Subscribe to receive curated secret deals and seasonal inspiration in your inbox.
+        </p>
+
+        <form class="season-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Check your inbox for exclusive secret deals.');">
+          <input type="email" class="season-newsletter-input" placeholder="Your email address..." required>
+          <button type="submit" class="season-newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <!-- 
-    - #FOOTER
+    - #MODERN MULTI-COLUMN FOOTER
   -->
-  <footer class="footer">
+  <footer class="modern-dark-footer">
+    <div class="pkg-detail-container">
 
-    <!-- Luminous Ambient Orbs with the same light blue gradient -->
-    <div class="footer-shape footer-shape-1" aria-hidden="true"></div>
-    <div class="footer-shape footer-shape-2" aria-hidden="true"></div>
+      <div class="modern-footer-grid">
 
-    <div class="footer-top">
-      <div class="container">
-
-        <!-- Column 1: Brand & About & Socials -->
-        <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="./assets/images/logo.svg" alt="Tourly logo">
+        <!-- Column 1: Brand -->
+        <div>
+          <a href="index.html" class="modern-footer-brand-title">
+            <ion-icon name="compass-outline" style="color: var(--bright-navy-blue);"></ion-icon>
+            Tourly
           </a>
-
-          <p class="footer-text">
-            Tourly is your premier sacred pilgrimage & holiday travel companion across India. We offer handpicked hotel stays, guided yatras, and hassle-free booking services.
+          <p class="modern-footer-tagline">
+            Your dream trip, fully planned. All you do is pack and go.
           </p>
-
-          <div class="footer-social-list">
-            <a href="https://wa.me/10123456790" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-            <a href="#" class="footer-social-link" aria-label="Instagram">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-            <a href="#" class="footer-social-link" aria-label="Facebook">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-            <a href="#" class="footer-social-link" aria-label="YouTube">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-            <a href="#" class="footer-social-link" aria-label="Twitter">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
+          <div class="modern-footer-socials">
+            <a href="#" class="modern-social-btn" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#" class="modern-social-btn" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#" class="modern-social-btn" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#" class="modern-social-btn" aria-label="YouTube"><ion-icon name="logo-youtube"></ion-icon></a>
           </div>
         </div>
 
-        <!-- Column 2: Quick Links (Navigation Options) -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Quick Links</h4>
-
-          <ul class="footer-link-list">
-            <li><a href="index.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Home</a></li>
-            <li><a href="about.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> About Us</a></li>
-            <li><a href="packages.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Tour Packages</a></li>
-            <li><a href="destinations.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Top Destinations</a></li>
-            <li><a href="gallery.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Photo Gallery</a></li>
-            <li><a href="contact.html" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Contact & Support</a></li>
+        <!-- Column 2: Company -->
+        <div>
+          <h4 class="modern-footer-heading">Company</h4>
+          <ul class="modern-footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Popular Yatras & Destinations (Options) -->
-        <div class="footer-col">
-          <h4 class="footer-col-title">Popular Yatras</h4>
-
-          <ul class="footer-link-list">
-            <li><a href="destination-detail.html?id=varanasi" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Varanasi Ganga Aarti</a></li>
-            <li><a href="destination-detail.html?id=ayodhya" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Ayodhya Ram Mandir</a></li>
-            <li><a href="destination-detail.html?id=prayagraj" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Prayagraj Sangam</a></li>
-            <li><a href="destination-detail.html?id=kedarnath" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Kedarnath Jyotirlinga</a></li>
-            <li><a href="destination-detail.html?id=amritsar" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Golden Temple Amritsar</a></li>
-            <li><a href="destination-detail.html?id=gaya" class="footer-link"><ion-icon name="chevron-forward-outline"></ion-icon> Bodh Gaya Trail</a></li>
+        <!-- Column 3: Destinations -->
+        <div>
+          <h4 class="modern-footer-heading">Destinations</h4>
+          <ul class="modern-footer-links">
+            <li><a href="destinations.html">North America</a></li>
+            <li><a href="destinations.html">Maldives</a></li>
+            <li><a href="package-detail.html">Dubai, UAE</a></li>
+            <li><a href="destinations.html">Tokyo, Japan</a></li>
+            <li><a href="destinations.html">Switzerland</a></li>
+            <li><a href="destinations.html" style="color: var(--bright-navy-blue); font-weight: 600;">View destinations →</a></li>
           </ul>
         </div>
 
-        <!-- Column 4: Contact & Newsletter -->
-        <div class="footer-col footer-col-contact">
-          <h4 class="footer-col-title">Get In Touch</h4>
-
-          <ul class="footer-contact-list">
-            <li class="footer-contact-item">
-              <ion-icon name="call-outline"></ion-icon>
-              <a href="tel:+919876543210" class="footer-link">+91 98765 43210</a>
-            </li>
-
-            <li class="footer-contact-item">
-              <ion-icon name="mail-outline"></ion-icon>
-              <a href="mailto:support@tourly.com" class="footer-link">support@tourly.com</a>
-            </li>
-
-            <li class="footer-contact-item">
-              <ion-icon name="location-outline"></ion-icon>
-              <span>Varanasi, UP & New Delhi, India</span>
-            </li>
+        <!-- Column 4: Utility -->
+        <div>
+          <h4 class="modern-footer-heading">Utility</h4>
+          <ul class="modern-footer-links">
+            <li><a href="terms-conditions.html">404 Page</a></li>
+            <li><a href="privacy-policy.html">Style Guide</a></li>
+            <li><a href="refund-policy.html">Changelog</a></li>
+            <li><a href="terms-conditions.html">Licenses</a></li>
+            <li><a href="index.html">Web Templates</a></li>
           </ul>
+        </div>
 
-          <div class="footer-newsletter">
-            <p class="newsletter-text">Subscribe for exclusive travel deals & yatra updates:</p>
-            <form action="#" class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Tourly!');">
-              <div class="newsletter-input-group">
-                <input type="email" name="email" class="newsletter-input" placeholder="Your email address..." required>
-                <button type="submit" class="newsletter-submit-btn">
-                  <span class="btn-roll">
-                    <span class="btn-roll-text">Subscribe</span>
-                    <span class="btn-roll-text" aria-hidden="true">Subscribe</span>
-                  </span>
-                  <ion-icon name="paper-plane-outline"></ion-icon>
-                </button>
-              </div>
-            </form>
-          </div>
+        <!-- Column 5: Singapore Office -->
+        <div>
+          <h4 class="modern-footer-heading">Singapore Office</h4>
+          <p class="modern-footer-address">
+            10 Collyer Quay, #09-01, Ocean Financial Centre, Singapore 049315
+          </p>
+          <p style="font-size: 13px; margin-bottom: 4px;">Contact Us:</p>
+          <a href="tel:+6567120128" class="modern-footer-contact-link">+65 6712 0128</a>
         </div>
 
       </div>
-    </div>
 
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">&copy; 2026 <a href="index.html">Tourly</a>. All Rights Reserved.</p>
-
-        <ul class="footer-bottom-list">
-          <li>
-            <a href="privacy-policy.html" class="footer-bottom-link">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="terms-conditions.html" class="footer-bottom-link">Terms & Conditions</a>
-          </li>
-          <li>
-            <a href="refund-policy.html" class="footer-bottom-link">Refund Policy</a>
-          </li>
-        </ul>
-
+      <!-- Bottom Bar -->
+      <div class="modern-footer-bottom">
+        <p>&copy; 2026 Tourly - Travel Agency. All Rights Reserved.</p>
+        <div class="modern-trust-badge">
+          <span>Rated <strong>4.9 / 5.0</strong> on Trustpilot</span>
+          <ion-icon name="shield-checkmark" style="color: #10b981; font-size: 18px;"></ion-icon>
+        </div>
       </div>
-    </div>
 
+    </div>
   </footer>
 
   <!-- Search Modal -->
@@ -560,68 +734,100 @@
   </a>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20have%20an%20inquiry!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/10123456790?text=Hello%20Tourly,%20I%20have%20an%20inquiry%20about%20the%20Dubai%20Package!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <ion-icon name="logo-whatsapp"></ion-icon>
   </a>
 
-  <!-- Custom JS -->
+  <!-- Custom Main JS -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- Package Detail Dynamic Data & Calculator Script -->
+  <!-- Interactive Package Detail Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const packageData = {
-        "kashi-ayodhya-yatra": {
-          title: "Kashi, Ayodhya & Prayagraj Sacred Yatra",
-          location: "India",
-          duration: "6 Days / 5 Nights",
-          maxPax: "Max: 15 People",
-          rating: "5.0 (58 Reviews)",
-          price: "Price On Request",
-          img: "./assets/images/varanasi.jpg"
-        },
-        "gaya-varanasi-circuit": {
-          title: "Gaya & Kashi Pilgrimage Trail",
-          location: "India",
-          duration: "5 Days / 4 Nights",
-          maxPax: "Max: 12 People",
-          rating: "4.9 (42 Reviews)",
-          price: "Price On Request",
-          img: "./assets/images/gaya.jpg"
-        },
-        "ayodhya-darshan": {
-          title: "Ayodhya Ram Mandir & Saryu Aarti Express",
-          location: "India",
-          duration: "3 Days / 2 Nights",
-          maxPax: "Max: 20 People",
-          rating: "5.0 (64 Reviews)",
-          price: "Price On Request",
-          img: "./assets/images/ayodhya.jpg"
-        },
-        "prayagraj-sangam": {
-          title: "Prayagraj Sangam & Sacred Heritage Tour",
-          location: "India",
-          duration: "3 Days / 2 Nights",
-          maxPax: "Max: 15 People",
-          rating: "4.9 (39 Reviews)",
-          price: "Price On Request",
-          img: "./assets/images/prayagraj.jpg"
-        }
-      };
+    // Duration Card Toggle
+    const durationCards = document.querySelectorAll('.pkg-duration-card');
+    const mainPrice = document.getElementById('pkg-main-price');
+    const widgetPrice = document.getElementById('pkg-widget-price');
+    const attrDuration = document.getElementById('pkg-attr-duration');
 
-      const params = new URLSearchParams(window.location.search);
-      const pkgId = params.get("id") || "kashi-ayodhya-yatra";
-      const data = packageData[pkgId] || packageData["kashi-ayodhya-yatra"];
+    durationCards.forEach(card => {
+      card.addEventListener('click', function () {
+        durationCards.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
 
-      // Update Header & Tags
-      document.getElementById("pkg-title").textContent = data.title;
-      document.getElementById("pkg-breadcrumb").textContent = data.title;
-      document.getElementById("pkg-location").textContent = data.location;
-      document.getElementById("pkg-duration").textContent = data.duration;
-      document.getElementById("pkg-pax").textContent = data.maxPax;
-      document.getElementById("pkg-rating").textContent = data.rating;
-      document.getElementById("pkg-banner-img").src = data.img;
+        const price = this.getAttribute('data-price');
+        const days = this.getAttribute('data-days');
+
+        if (mainPrice) mainPrice.textContent = price;
+        if (widgetPrice) widgetPrice.textContent = price;
+        if (attrDuration) attrDuration.textContent = days + " (Transfer Included)";
+      });
     });
+
+    // Day-by-day Itinerary Accordion
+    const itineraryItems = document.querySelectorAll('.pkg-itinerary-item');
+    itineraryItems.forEach(item => {
+      const btn = item.querySelector('.pkg-itinerary-btn');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          itineraryItems.forEach(i => {
+            i.classList.remove('active');
+            const otherBtn = i.querySelector('.pkg-itinerary-btn');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      }
+    });
+
+    // Testimonials Carousel Logic
+    const reviewsData = [
+      {
+        title: "Unforgettable journey!",
+        body: '"From booking to the transfers, everything was top-notch. Our tour guide was so knowledgeable, and the itinerary left us with memories to cherish forever."',
+        name: "James Wilson",
+        tour: "Dubai Discovery Tour",
+        avatar: "JW"
+      },
+      {
+        title: "Best desert safari ever!",
+        body: '"The 4x4 dune bashing and sunset Bedouin dinner were magical. Tourly made sure everything was effortless and perfectly organized for our family."',
+        name: "Elena Rostova",
+        tour: "Dubai Luxury Escape",
+        avatar: "ER"
+      },
+      {
+        title: "Seamless from start to finish",
+        body: '"VIP access to Burj Khalifa without lines saved us so much time. The hotel recommendations in Dubai Marina exceeded our highest expectations."',
+        name: "Michael Chen",
+        tour: "UAE Highlights Tour",
+        avatar: "MC"
+      }
+    ];
+
+    let currentReviewIdx = 0;
+    function updateReviewDisplay() {
+      const r = reviewsData[currentReviewIdx];
+      document.getElementById('traveler-quote-title').textContent = r.title;
+      document.getElementById('traveler-quote-body').textContent = r.body;
+      document.getElementById('traveler-name').textContent = r.name;
+      document.getElementById('traveler-tour').textContent = r.tour;
+      document.getElementById('traveler-avatar').textContent = r.avatar;
+    }
+
+    function nextTravelerReview() {
+      currentReviewIdx = (currentReviewIdx + 1) % reviewsData.length;
+      updateReviewDisplay();
+    }
+
+    function prevTravelerReview() {
+      currentReviewIdx = (currentReviewIdx - 1 + reviewsData.length) % reviewsData.length;
+      updateReviewDisplay();
+    }
   </script>
 
   <!-- Ionicons -->

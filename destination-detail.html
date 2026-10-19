@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=4.8">
+  <link rel="stylesheet" href="./assets/css/style.css?v=5.3">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,39 +80,9 @@
   <main style="padding-top: 100px;">
     <article class="container" style="padding-block: 40px;">
 
-      <!-- Breadcrumb -->
-      <ul class="breadcrumb-list" style="justify-content: flex-start; margin-bottom: 25px;">
-        <li><a href="index.html" class="breadcrumb-link" style="color: var(--black-coral);">Home</a></li>
-        <li>&gt;</li>
-        <li><a href="destinations.html" class="breadcrumb-link" style="color: var(--black-coral);">Destinations</a></li>
-        <li>&gt;</li>
-        <li class="breadcrumb-item active" id="dest-breadcrumb">Varanasi Sacred Ghats & Ganga Aarti</li>
-      </ul>
-
       <!-- Detail Banner Hero -->
       <div class="detail-banner">
         <img src="./assets/images/varanasi.jpg" alt="Destination Banner" id="dest-banner-img">
-        <div class="detail-banner-overlay">
-          <h1 class="detail-title" id="dest-title">Varanasi Sacred Ghats & Ganga Aarti</h1>
-          <div class="detail-meta-tags">
-            <div class="meta-tag-pill">
-              <ion-icon name="location-outline"></ion-icon>
-              <span id="dest-country">Varanasi, India</span>
-            </div>
-            <div class="meta-tag-pill">
-              <ion-icon name="sunny-outline"></ion-icon>
-              <span id="dest-season">Best Time: May - Oct</span>
-            </div>
-            <div class="meta-tag-pill">
-              <ion-icon name="thermometer-outline"></ion-icon>
-              <span>Avg Temp: 26°C</span>
-            </div>
-            <div class="meta-tag-pill" style="background: var(--bright-navy-blue);">
-              <ion-icon name="star"></ion-icon>
-              <span>4.9 / 5.0 Rating</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Main Layout with Sticky Inquiry Sidebar -->
@@ -127,7 +97,6 @@
             <a href="#attractions" class="detail-tab-btn">Attractions</a>
             <a href="#itinerary" class="detail-tab-btn">Suggested Itinerary</a>
             <a href="#culture" class="detail-tab-btn">Culture & Food</a>
-            <a href="#faqs" class="detail-tab-btn">Travel FAQs</a>
           </div>
 
           <!-- Section 1: Overview -->
@@ -253,33 +222,6 @@
                     <ion-icon name="car-outline" style="color: var(--bright-navy-blue);"></ion-icon>
                     <span>Transit: E-Rickshaws, Auto Taxis & Ceremonial Boats</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Section 5: FAQs -->
-          <div class="detail-section-block" id="faqs">
-            <h3 class="detail-section-title">Destination FAQs</h3>
-
-            <div class="faq-list" style="margin-top: 0;">
-              <div class="faq-item active">
-                <div class="faq-title">
-                  <span>When is the best season to visit?</span>
-                  <ion-icon name="chevron-down-outline"></ion-icon>
-                </div>
-                <div class="faq-content">
-                  May through October offers warm Mediterranean weather, calm seas, and full operating hours for coastal boat charters.
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <div class="faq-title">
-                  <span>Is this destination suitable for families and senior travelers?</span>
-                  <ion-icon name="chevron-down-outline"></ion-icon>
-                </div>
-                <div class="faq-content">
-                  Yes, while there are scenic staircases, funicular railways and private taxi golf-carts are readily available for easy mobility.
                 </div>
               </div>
             </div>
@@ -531,11 +473,11 @@
       const destId = params.get("id") || "varanasi";
       const data = destData[destId] || destData["varanasi"];
 
-      document.getElementById("dest-title").textContent = data.title;
-      document.getElementById("dest-breadcrumb").textContent = data.title;
-      document.getElementById("dest-country").textContent = data.country;
-      document.getElementById("dest-season").textContent = data.season;
-      document.getElementById("dest-banner-img").src = data.img;
+      if (document.getElementById("dest-title")) document.getElementById("dest-title").textContent = data.title;
+      if (document.getElementById("dest-breadcrumb")) document.getElementById("dest-breadcrumb").textContent = data.title;
+      if (document.getElementById("dest-country")) document.getElementById("dest-country").textContent = data.country;
+      if (document.getElementById("dest-season")) document.getElementById("dest-season").textContent = data.season;
+      if (document.getElementById("dest-banner-img")) document.getElementById("dest-banner-img").src = data.img;
     });
   </script>
 

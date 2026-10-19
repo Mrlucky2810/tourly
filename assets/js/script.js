@@ -84,6 +84,35 @@ faqItems.forEach(item => {
 });
 
 /**
+ * Modern Two-Column FAQ Accordion Toggle
+ */
+const faqModernItems = document.querySelectorAll(".faq-modern-item");
+faqModernItems.forEach(item => {
+  const trigger = item.querySelector(".faq-modern-trigger");
+  if (trigger) {
+    trigger.addEventListener("click", () => {
+      const isCurrentlyActive = item.classList.contains("active");
+
+      faqModernItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+          const otherBtn = otherItem.querySelector(".faq-modern-trigger");
+          if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      if (isCurrentlyActive) {
+        item.classList.remove("active");
+        trigger.setAttribute("aria-expanded", "false");
+      } else {
+        item.classList.add("active");
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    });
+  }
+});
+
+/**
  * Filter Buttons (Destinations & Gallery)
  */
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
